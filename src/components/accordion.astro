@@ -1,0 +1,14 @@
+---
+const { size = "", txt } = Astro.props;
+// Hvis der ikke skal bruges sizeClasses, så sletter vi bare classList nede i details.
+const sizeClasses = {
+  desktop: "pt-50",
+  mobile: "pt-100",
+};
+---
+
+<details class="bg-neutrals-50 p-m mb-m rounded-border-radius-11 lg:p-ml lg:mb-2xl lg:rounded-border-radius-27">
+  <!-- Details-tagget definerer en accordion med summary (overskriften) og pil -->
+  <summary class:list={[sizeClasses[size]]} class="text-h5_m lg:text-h5_d font-bold text-brown-800 font-sans">{txt}</summary>
+  <slot />
+</details>

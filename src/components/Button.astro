@@ -1,5 +1,36 @@
 ---
+const { variant = "primary", hover = "hover", left = "red", right = "" } = Astro.props;
+import { Image } from "astro:assets";
+
+const buttonStyling = "px-l py-sm text-p font-sans text-neutrals-950";
+
+const variantClasses = {
+  primary: "bg-red-500",
+  secondary: "bg-yellow-500",
+};
+// I cards bruges nothover
+const hoverClasses = {
+  hover: "flex hover:scale-105 transition-transform cursor-pointer",
+  nothover: "flex",
+};
+// Siderne er tilføjet som SVG-filer fra tailwind.css
+const leftClasses = {
+  yellow_l: "bg-yellow_l",
+  red_l: "bg-red_l",
+};
+
+const rightClasses = {
+  yellow_r: "bg-yellow_r",
+  red_r: "bg-red_r",
+};
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
+
+<div class="px-60 flex">
+  <div class:list={[hoverClasses[hover]]}>
+    <div class:list={[leftClasses[left]]} class="w-7"></div>
+    <button class:list={[buttonStyling, variantClasses[variant]]}>
+      <slot />
+    </button>
+    <div class:list={[rightClasses[right]]} class="w-7"></div>
+  </div>
 </div>

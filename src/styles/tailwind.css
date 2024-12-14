@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
+}
 
+@layer utilities {
+  .bg-yellow_l {
+    background-image: url("/yellow_l.svg");
+  }
+  .bg-yellow_r {
+    background-image: url("/yellow_r.svg");
+  }
+  .bg-red_l {
+    background-image: url("/red_l.svg");
+  }
+  .bg-red_r {
+    background-image: url("/red_r.svg");
+  }
 }
