@@ -136,12 +136,14 @@ export default {
         h4_d: ["2.250rem", { lineHeight: "2.188rem" }],
         h5_d: ["1.5rem", { lineHeight: "1.375rem" }],
         h6_d: ["1rem", { lineHeight: "1.375rem" }],
+        button_d: ["1rem", { lineHeight: "1.375rem" }],
         h1_m: ["2.369rem", { lineHeight: "2.875rem" }],
         h2_m: ["1.777rem", { lineHeight: "2.063rem" }],
         h3_m: ["1.333rem", { lineHeight: "1.75rem" }],
         h4_m: ["1.333", { lineHeight: "1.75rem" }],
         h5_m: ["1.25rem", { lineHeight: "1.625rem" }],
         h6_m: ["1rem", { lineHeight: "1.188rem" }],
+        button_m: ["1rem", { lineHeight: "1.188rem" }],
       },
       /* Tilføj dit fontvægt-hierarki nedenfor */
       fontWeight: {

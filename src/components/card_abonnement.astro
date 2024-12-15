@@ -1,0 +1,47 @@
+---
+const { url = "#", badge = "false", type = "", pris = "" } = Astro.props;
+import { Image } from "astro:assets";
+import icon_ckeck_black from "../assets/images/icon_check_black.svg";
+import icon_cross_red from "../assets/images/icon_cross_red.svg";
+import Button from "../components/Button.astro";
+---
+
+<article class="card bg-neutrals-50 rounded-border-radius-43 @container">
+  <a href={url} class="flex flex-col justify-between h-full">
+    <div class="relative">
+      {badge === "true" && <div class="badge absolute rounded-border-radius-full text-button_m font-sans font-bold bg-yellow-700 px-ml py-xxs top-m right-m lg:text-button_d">Populær</div>}
+    </div>
+    <section class="py-2xl px-ml lg:px-xl">
+      <div class="space-y-sm pb-ml">
+        <div class="space-y-xxs">
+          <h4 class="h4_m font-sans font-bold lg:text-h4_d">{type}</h4>
+          <h5 class="h5_m font-sans font-bold lg:text-h5_d">Abonnement</h5>
+        </div>
+        <div class="space-y-sm">
+          <div class="flex gap-s">
+            <Image src={icon_ckeck_black} alt="sort check-ikon" />
+            <p class="text-p font-sans font-regular">Meld dig ind online</p>
+          </div>
+          <div class="flex gap-s">
+            <Image src={icon_ckeck_black} alt="sort check-ikon" />
+            <p class="text-p font-sans font-regular">Opnå point for brugt tøj</p>
+          </div>
+          <div class="flex gap-s">
+            <Image src={icon_ckeck_black} alt="sort check-ikon" />
+            <p class="text-p font-sans font-regular">Byt tøj for dine point</p>
+          </div>
+          <div class="flex gap-s">
+            <Image src={icon_cross_red} alt="sort check-ikon" />
+            <p class="text-p font-sans font-regular">Kun adgang til din valgte butik</p>
+          </div>
+          <div class="flex gap-s">
+            <Image src={icon_cross_red} alt="sort check-ikon" />
+            <p class="text-p font-sans font-regular">Ingen månedlige bonuspoint</p>
+          </div>
+        </div>
+        <h5 class="h5_m font-sans font-bold lg:text-h5_d"><span>{pris}</span> kr./md.</h5>
+      </div>
+      <Button left="red_l" right="red_r" hover="nothover" variant="primary">Køb abonnement</Button>
+    </section>
+  </a>
+</article>
