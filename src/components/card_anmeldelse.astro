@@ -1,0 +1,19 @@
+---
+const { url = "#", overskrift = "", underoverskrift = "", anmeldelse = "", cardimage = "", cardimagealt = "" } = Astro.props;
+import { Image } from "astro:assets";
+import anmeldelse_1 from "../assets/images/anmeldelse_1.webp";
+import anmeldelse_2 from "../assets/images/anmeldelse_2.webp";
+import anmeldelse_3 from "../assets/images/anmeldelse_3.webp";
+---
+
+<article class="card bg-neutrals-50 rounded-border-radius-43 max-w-[327px] flex flex-col @container lg:max-w-[367px]">
+  <img src={cardimage} alt={cardimagealt} />
+  <!-- <Image src={anmeldelse_1} alt="" /> -->
+  <section class="space-y-s p-xl">
+    <div>
+      <h5 class="text-h5_m font-sans font-bold lg:text-h5_d">{overskrift}</h5>
+      <h6 class="text-h6_m font-sans font-bold lg:text-h6_d">{underoverskrift}</h6>
+    </div>
+    <p class="text-p font-sans font-regular lg:text-p">{anmeldelse}</p>
+  </section>
+</article>

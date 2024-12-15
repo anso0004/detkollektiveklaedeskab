@@ -6,16 +6,16 @@ import icon_cross_red from "../assets/images/icon_cross_red.svg";
 import Button from "../components/Button.astro";
 ---
 
-<article class="card bg-neutrals-50 rounded-border-radius-43 @container">
-  <a href={url} class="flex flex-col justify-between h-full">
+<article class="card bg-neutrals-50 rounded-border-radius-43 @container hover:scale-105 transition-transform cursor-pointer">
+  <a href={url} class="flex flex-col">
     <div class="relative">
       {badge === "true" && <div class="badge absolute rounded-border-radius-full text-button_m font-sans font-bold bg-yellow-700 px-ml py-xxs top-ml right-ml lg:text-button_d">Populær</div>}
     </div>
     <section class="py-2xl px-ml lg:px-xl">
       <div class="space-y-ml pb-ml">
         <div class="space-y-xxs">
-          <h4 class="h4_m font-sans font-bold lg:text-h4_d">{type}</h4>
-          <h5 class="h5_m font-sans font-bold lg:text-h5_d">Abonnement</h5>
+          <h4 class="text-h4_m font-sans font-bold lg:text-h4_d">{type}</h4>
+          <h5 class="text-h5_m font-sans font-bold lg:text-h5_d">Abonnement</h5>
         </div>
         <div class="space-y-sm">
           <div class="flex gap-s">
