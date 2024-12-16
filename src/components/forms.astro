@@ -1,0 +1,49 @@
+---
+const { variant = "primary", hover = "hover", left = "red", right = "" } = Astro.props;
+import Button from "../components/Button.astro";
+---
+
+<form class="space-y-xl" name="nyhedsbrev" netlify>
+  <div class="flex flex-col space-y-sm">
+    <h5 class="text-h5_m font-bold lg:text-h5_d">Kontaktinformation</h5>
+    <div class="flex flex-col gap-1 space-y-xxs">
+      <label class="text-p font-bold" for="fuldenavn">Fuldenavn:</label>
+      <input class="rounded-border-radius-11 border-none py-s px-m min-w-[16.125rem] bg-neutrals-50" id="fornavn" name="fornavn" type="text" placeholder="Andrea" />
+    </div>
+    <div class="flex flex-col gap-1 space-y-xxs">
+      <label class="text-p font-bold" for="tel">Telefon nummer</label>
+      <input class="rounded-border-radius-11 border-none py-s px-m min-w-[16.125rem] bg-neutrals-50" id="telefon" name="telefon" type="tel" placeholder="+45 10 20 30 40" />
+    </div>
+    <div class="flex flex-col gap-1">
+      <label class="text-p font-bold" for="email">E-mail:</label>
+      <input class="rounded-border-radius-11 border-none py-s px-m min-w-[16.125rem] bg-neutrals-50" id="email" name="email" type="email" placeholder="andreaandreasen@gmail.dk" />
+    </div>
+  </div>
+  <div class="flex flex-col gap-1 space-y-sm">
+    <h5 class="text-h5_m font-bold lg:text-h5_d">Faktureringsadresse</h5>
+    <div class="flex flex-col gap-1 space-y-xxs">
+      <label class="text-p font-bold" for="land">Land:</label>
+      <input class="rounded-border-radius-11 border-none py-s px-m min-w-[16.125rem] bg-neutrals-50" id="land" name="land" type="text" placeholder="Danmark" />
+    </div>
+    <div class="lg:flex lg:flex-col-2 gap-1 lg:space-x-m">
+      <div class="flex flex-col gap-1 space-y-xxs">
+        <label class="text-p font-bold" for="postnummer">Postnummer:</label>
+        <input class="rounded-border-radius-11 border-none py-s px-m min-w-[16.125rem] bg-neutrals-50" id="postnummer" name="postnummer" type="text" placeholder="1860" />
+      </div>
+      <div class="flex flex-col gap-1 space-y-xxs">
+        <label class="text-p font-bold" for="by">By:</label>
+        <input class="rounded-border-radius-11 border-none py-s px-m min-w-[16.125rem] bg-neutrals-50" id="by" name="by" type="text" placeholder="Vinget 12" />
+      </div>
+    </div>
+  </div>
+  <div class="space-y-sm">
+    <input type="checkbox" id="my-id" class="rounded-border-radius-4 border-none bg-neutrals-50" />
+    <label for="my-id">Jeg accepterer handelsbetingelserne.</label>
+    <p class="text-p">* Felter skal udfyldes</p>
+  </div>
+
+  <Button type="submit" left="red_l" right="red_r" hover="hover" variant="primary">Forsæt til betaling</Button>
+</form>
+
+<!-- <label for="fornavn">Fornavn:</label>
+  <input class="block w-full rounded-lg bg-[#1B354E] border-none placeholder:text-[#5389BC] placeholder:font-poppins text-white" type="text" name="fornavn" id="fornavn" placeholder="Anders" /> -->

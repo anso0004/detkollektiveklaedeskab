@@ -84,6 +84,7 @@ export default {
 
     /* Border radius størrelser herunder */
     borderRadius: {
+      "border-radius-4": "4px",
       "border-radius-11": "11px",
       "border-radius-27": "27px",
       "border-radius-43": "43px",
