@@ -1,0 +1,25 @@
+---
+const { url = "#", overskrift = "", adresse1 = "", adresse2 = "", cardimage = "", cardimagealt = "" } = Astro.props;
+import { Image } from "astro:assets";
+import anmeldelse_1 from "../assets/images/anmeldelse_1.webp";
+import anmeldelse_2 from "../assets/images/anmeldelse_2.webp";
+import anmeldelse_3 from "../assets/images/anmeldelse_3.webp";
+import Button from "../components/Button.astro";
+---
+
+<article class="card bg-neutrals-50 rounded-border-radius-43 max-w-[327px] flex flex-col @container lg:max-w-[367px] hover:scale-105 transition-transform">
+  <a href="">
+    <img src={cardimage} alt={cardimagealt} />
+    <!-- <Image src={anmeldelse_1} alt="" /> -->
+    <section class="space-y-ml p-xl">
+      <div class="space-y-sm">
+        <h5 class="text-h5_m font-sans font-bold lg:text-h5_d">{overskrift}</h5>
+        <div class="space-y-xxs">
+          <h6 class="text-h6_m font-sans font-regular lg:text-h6_d">{adresse1}</h6>
+          <h6 class="text-h6_m font-sans font-regular lg:text-h6_d">{adresse2}</h6>
+        </div>
+      </div>
+      <Button left="red_l" right="red_r" hover="nothover" variant="primary">Find vej</Button>
+    </section>
+  </a>
+</article>
