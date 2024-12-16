@@ -1,0 +1,14 @@
+---
+const { url = "#", image = "", imagealt = "", icon = "", iconalt = "", some = "" } = Astro.props;
+---
+
+<a href={url} class="group relative block">
+  <img class="rounded-border-radius-43 w-full" src={image} alt={imagealt} />
+  <!-- Overlay -->
+  <div class="absolute inset-0 flex flex-col gap-xxs items-center justify-center bg-brown-500 bg-opacity-0 rounded-border-radius-43 text-white opacity-0 transition-all duration-300 group-hover:bg-opacity-80 group-hover:opacity-100">
+    <img class="" src={icon} alt={iconalt} />
+    <h6 class="text-h6_m font-bold font-sans text-yellow-500 text-center">Se mere <br />på {some}</h6>
+  </div>
+</a>
+
+<!-- Assistance fra ChatGPT med hover -->

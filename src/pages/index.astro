@@ -6,6 +6,7 @@ import Abonnement from "../components/card_abonnement.astro";
 import Anmeldelse from "../components/card_anmeldelse.astro";
 import Butik from "../components/card_butik.astro";
 import SoMe_large from "../components/some_large.astro";
+import SoMe_small from "../components/some_small.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
@@ -56,8 +57,28 @@ import thumbsup from "../assets/images/thumbsup.png";
         anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
       />
     </section>
-    <section>
-      <SoMe_large />
+    <section class="space-y-l">
+      <h2 class="font-display text-h2_m font-bold text-brown-800">Følg os</h2>
+      <div class="grid gap-sm lg:grid-cols-5">
+        <div class="grid gap-sm lg:grid-cols-2 col-span-2">
+          <SoMe_large url="" video="some_large1.mov" videoalt="Video fra socialt medie" icon="icon_instagram.svg" iconalt="Instagram-logo" some="Instagram" />
+          <div class="grid gap-sm grid-cols-2 lg:grid-cols-1">
+            <SoMe_small url="" image="some_1.webp" imagealt="Billede fra socialt medie" icon="icon_instagram.svg" iconalt="Instagram-logo" some="Instagram" />
+            <SoMe_small url="" image="some_2.webp" imagealt="Billede fra socialt medie" icon="icon_tiktok.svg" iconalt="Tiktok-logo" some="TikTok" />
+          </div>
+        </div>
+        <div class="grid gap-sm lg:grid-cols-2 col-span-2">
+          <div class="grid gap-sm grid-cols-2 lg:grid-cols-1">
+            <SoMe_small url="" image="some_3.webp" imagealt="Billede fra socialt medie" icon="icon_tiktok.svg" iconalt="Tiktok-logo" some="TikTok" />
+            <SoMe_small url="" image="some_4.webp" imagealt="Billede fra socialt medie" icon="icon_instagram.svg" iconalt="Instagram-logo" some="Instagram" />
+          </div>
+          <SoMe_large url="" video="some_large2.mov" videoalt="Video fra socialt medie" icon="icon_tiktok.svg" iconalt="Tiktok-logo" some="TikTok" />
+        </div>
+        <div class="grid gap-sm col-span-2 grid-cols-2 lg:grid-cols-1 lg:col-span-1">
+          <SoMe_small url="" image="some_5.webp" imagealt="Billede fra socialt medie" icon="icon_instagram.svg" iconalt="Instagram-logo" some="Instagram" />
+          <SoMe_small url="" image="some_6.webp" imagealt="Billede fra socialt medie" icon="icon_tiktok.svg" iconalt="Tiktok-logo" some="TikTok" />
+        </div>
+      </div>
     </section>
   </article></MainLayout
 >
