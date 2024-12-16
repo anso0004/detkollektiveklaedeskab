@@ -1,1 +1,55 @@
-<article class="max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] m-auto"></article>
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Accordion from "../components/Accordion.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+import large2 from "../assets/images/large_2.webp";
+import large3 from "../assets/images/large_3.webp";
+import figure1 from "../assets/images/figure_1.webp";
+import figure_blue from "../assets/images/figure_blue.svg";
+import figure_brown from "../assets/images/figure_brown.svg";
+import SecondaryLayout from "../layouts/SecondaryLayout.astro";
+---
+
+<MainLayout title="Titel">
+  <article class="max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] m-auto">
+    <section class="lg:grid lg:grid-cols-2 gap-10">
+      <div>
+        <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 pb-3xl">Om os</h1>
+        <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pb-s">Siden 2014</h3>
+        <div class="space-y-sm">
+          <p class="text-p font-sans">Det Kollektive Klædeskab opstod som en forretningsidé, der skulle gøre op med den forurenende tøjindustri. Grundlæggeren Louise tænte, at hvis man skabte et abonnement, der kunne ændre vores tøjvaner, så man i stedet for at købe nyt kunne dele et fælles klædeskab.</p>
+          <p class="text-p font-sans">Der gik mange år, hvor konceptet blev afprøvet, men det var svært at få kunderne med på en dele-idé. Det endte med, at én af butikkerne blev solgt til Lene, som i dag er CEO og butiksejer i København og Roskilde.</p>
+          <p class="text-p font-sans">Lene fik spark i de sociale medier, især Instagram, hvor følgerantallet på en kort periode steg drastisk. I dag består Det Kollektive Klædeskab af fire butikker med tre fulstidsansatte og et team af frivillige, der er med til at drive forretningen mod en bæredygtigere verden.</p>
+        </div>
+        <div class="pt-2xl">
+          <Button left="red_l" right="red_r" hover="hover" variant="primary">Bliv frivillig</Button>
+        </div>
+      </div>
+      <div>
+        <Image class="" src={figure1} alt="Gruppebillede" />
+        <!-- <Image class="" src={figure_blue} alt="Gruppebillede" />
+        <Image class="" src={figure_brown} alt="Gruppebillede" /> -->
+      </div>
+    </section>
+    <section></section>
+    <section class="lg:grid lg:grid-cols-2">
+      <div>
+        <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800">Vi gør en forskel</h3>
+        <p class="text-p font-sans">Tekstilindustrien står for op mod 10% af verdens samlede CO2-udledning. Det gør den til en af de mest forurenende industrier.</p>
+        <p class="text-p font-sans">Som medlem af Det Kollektive Klædeskab gør du en konkret forskel for klimaet. Du bytter og deler tøj, i stedet for at købt nyt. Du bidrager til at reducere nyproduceret tøj og bekæmpe overproduktion.</p>
+        <p class="text-p font-sans">Vi ønsker at gøre mode mere bæredygtigt og tilgængeligt for alle. Vi skaber et cirkulært klædeskab, hvor det er enkelt at forny sin stil med omtanke.</p>
+      </div>
+      <div>
+        <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800">Vi skaber forandring</h3>
+        <p class="text-p font-sans">Det Kollektrive Klædeskab stræber mod at have tøj til alle forbrugere uanset alder, køn og størrelse. Vores vision er at gøre det nemt og inspirerende at finde tøj, der passer perfekt til både krop og personlighed. Det skal være et sted, hvor alle føler sig velkomne og repræsentere, uanset hvem de er.</p>
+        <p class="text-p font-sans">Vi drømmer om at skabe en ny måde at forbruge på, hvor deling og genbrug bliver normen. Sammen kan vi bygge en fremtid, hvor det muligt at udtrykke sin personlige stil og samtidigt passe på planeten.</p>
+      </div>
+    </section>
+    <section class="!-max-w-0">
+      <Image class="" src={large3} alt="Gruppebillede" />
+    </section>
+  </article>
+</MainLayout>
