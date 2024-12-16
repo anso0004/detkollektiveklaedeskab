@@ -1,1 +1,10 @@
-<article class="max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] m-auto"></article>
+---
+import Forms from "../components/Forms.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Titel">
+  <article class="max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] m-auto">
+    <Forms>Jeg er en form</Forms>
+  </article>
+</MainLayout>
