@@ -2,11 +2,16 @@
 const { variant = "primary", hover = "hover", left = "red", right = "" } = Astro.props;
 import { Image } from "astro:assets";
 
-const buttonStyling = "px-l py-sm text-p font-sans text-neutrals-950 text-button_m font-bold lg:text-button_d lg:font-bold";
+const buttonStyling = "";
 
 const variantClasses = {
-  primary: "bg-red-500",
-  secondary: "bg-yellow-500",
+  primary: "bg-red-500 font-sans text-neutrals-950 px-l py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold ",
+  secondary: "bg-yellow-500 font-sans text-neutrals-950 px-l py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold",
+  header_primary: "text-h2_m font-display font-bold text-brown-800 lg:text-h6_d lg:font-sans",
+  header_secondary: "text-h2_m font-display font-bold text-yellow-500 lg:text-h6_d lg:font-sans",
+  footerlinks: "text-p text-yellow-500 font-sans",
+  paragraphlinks: "text-p",
+  progres: "bg-brown-800 w-ml h-ml rounded-border-radius-full text-p text-yellow-500 font-bold",
 };
 // I cards bruges nothover
 const hoverClasses = {
@@ -15,22 +20,22 @@ const hoverClasses = {
 };
 // Siderne er tilføjet som SVG-filer fra tailwind.css
 const leftClasses = {
-  yellow_l: "bg-yellow_l",
-  red_l: "bg-red_l",
+  yellow_l: "bg-yellow_l w-7",
+  red_l: "bg-red_l w-7",
 };
 
 const rightClasses = {
-  yellow_r: "bg-yellow_r",
-  red_r: "bg-red_r",
+  yellow_r: "bg-yellow_r w-7",
+  red_r: "bg-red_r w-7",
 };
 ---
 
 <div class="flex">
   <div class:list={[hoverClasses[hover]]}>
-    <div class:list={[leftClasses[left]]} class="w-7"></div>
+    <div class:list={[leftClasses[left]]} class=""></div>
     <button class:list={[buttonStyling, variantClasses[variant]]}>
       <slot />
     </button>
-    <div class:list={[rightClasses[right]]} class="w-7"></div>
+    <div class:list={[rightClasses[right]]} class=""></div>
   </div>
 </div>
