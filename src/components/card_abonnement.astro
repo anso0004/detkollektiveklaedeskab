@@ -1,5 +1,5 @@
 ---
-const { url = "#", badge = "false", type = "", pris = "" } = Astro.props;
+const { url = "#", badge = "false", type = "", pris = "", icon1 = "", iconalt1 = "", icon2 = "", iconalt2 = "", icon3 = "", iconalt3 = "", icon4 = "", iconalt4 = "", icon5 = "", iconalt5 = "" } = Astro.props;
 import { Image } from "astro:assets";
 import icon_ckeck_black from "../assets/images/icon_check_black.svg";
 import icon_cross_red from "../assets/images/icon_cross_red.svg";
@@ -19,24 +19,29 @@ import Button from "../components/Button.astro";
         </div>
         <div class="space-y-sm">
           <div class="flex gap-s">
-            <Image src={icon_ckeck_black} alt="sort check-ikon" />
+            <!-- <Image src={icon_ckeck_black} alt="sort check-ikon" /> -->
+            <img src={icon1} alt={iconalt1} />
             <p class="text-p font-sans font-regular">Meld dig ind online</p>
           </div>
           <div class="flex gap-s">
-            <Image src={icon_ckeck_black} alt="sort check-ikon" />
+            <!-- <Image src={icon_ckeck_black} alt="sort check-ikon" /> -->
+            <img src={icon2} alt={iconalt2} />
             <p class="text-p font-sans font-regular">Opnå point for brugt tøj</p>
           </div>
           <div class="flex gap-s">
-            <Image src={icon_ckeck_black} alt="sort check-ikon" />
+            <!-- <Image src={icon_ckeck_black} alt="sort check-ikon" /> -->
+            <img src={icon3} alt={iconalt3} />
             <p class="text-p font-sans font-regular">Byt tøj for dine point</p>
           </div>
           <div class="flex gap-s">
-            <Image src={icon_cross_red} alt="sort check-ikon" />
-            <p class="text-p font-sans font-regular">Kun adgang til din valgte butik</p>
+            <!-- <Image src={icon_cross_red} alt="sort check-ikon" /> -->
+            <img src={icon4} alt={iconalt4} />
+            <p class="text-p font-sans font-regular">Adgang til alle butikker</p>
           </div>
           <div class="flex gap-s">
-            <Image src={icon_cross_red} alt="sort check-ikon" />
-            <p class="text-p font-sans font-regular">Ingen månedlige bonuspoint</p>
+            <!-- <Image src={icon_cross_red} alt="sort check-ikon" /> -->
+            <img src={icon5} alt={iconalt5} />
+            <p class="text-p font-sans font-regular">Månedlige bonuspoint</p>
           </div>
         </div>
         <h5 class="h5_m font-sans font-bold lg:text-h5_d"><span>{pris}</span> kr./md.</h5>
