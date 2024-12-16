@@ -18,4 +18,12 @@
   .bg-red_r {
     background-image: url("/red_r.svg");
   }
+
+  .flip_horisontal {
+    transform: scaleX(-1);
+  }
+
+  .flip_vertikal {
+    transform: scaleY(-1);
+  }
 }
