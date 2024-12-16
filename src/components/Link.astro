@@ -1,7 +1,7 @@
 ---
 // Henter parametrene fra Astro.props
 // const { href="#", target="_self"} = Astro.props;
-const { variant = "primary", hover = "hover", left = "red", right = "" } = Astro.props;
+const { variant = "primary", hover = "hover", left = "red", right = "", href = "href" } = Astro.props;
 import { Image } from "astro:assets";
 
 const buttonStyling = "";
@@ -9,14 +9,16 @@ const buttonStyling = "";
 const variantClasses = {
   primary: "bg-red-500 font-sans text-neutrals-950 px-l py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold ",
   secondary: "bg-yellow-500 font-sans text-neutrals-950 px-l py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold",
-  tertiary: "text-h2_m font-display font-bold text-brown-800 lg:text-h6_d lg:font-sans",
-  quaternary: "",
+  header_primary: "text-h2_m font-display font-bold text-brown-800 lg:text-h6_d lg:font-sans",
+  header_secondary: "text-h2_m font-display font-bold text-yellow-500 lg:text-h6_d lg:font-sans",
+  footerlinks: "text-p text-yellow-500 font-sans",
 };
 // I cards bruges nothover
 const hoverClasses = {
   hover: "flex hover:scale-105 transition-transform cursor-pointer",
   hoverheader: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-brown-800 transition-transform cursor-pointer",
   nothover: "flex",
+  footerhover: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-yellow-500 transition-transform cursor-pointer",
 };
 // Siderne er tilføjet som SVG-filer fra tailwind.css
 const leftClasses = {
@@ -30,8 +32,7 @@ const rightClasses = {
 };
 ---
 
-<!-- <a href={href} class="underline" target={target}><slot /></a> -->
-<div class="flex">
+<!-- <a href={href} class="underline" target={target}><slot /></a> --><!-- <div class="flex">
   <div class:list={[hoverClasses[hover]]}>
     <div class:list={[leftClasses[left]]} class=""></div>
     <button class:list={[buttonStyling, variantClasses[variant]]}>
@@ -39,4 +40,15 @@ const rightClasses = {
     </button>
     <div class:list={[rightClasses[right]]} class=""></div>
   </div>
-</div>
+</div> -->
+<a href={href}>
+  <div class="flex">
+    <div class:list={[hoverClasses[hover]]}>
+      <div class:list={[leftClasses[left]]} class=""></div>
+      <button class:list={[buttonStyling, variantClasses[variant]]}>
+        <slot />
+      </button>
+      <div class:list={[rightClasses[right]]} class=""></div>
+    </div>
+  </div>
+</a>
