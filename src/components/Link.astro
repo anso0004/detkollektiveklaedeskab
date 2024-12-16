@@ -1,7 +1,7 @@
 ---
 // Henter parametrene fra Astro.props
 // const { href="#", target="_self"} = Astro.props;
-const { variant = "primary", hover = "hover", left = "red", right = "", href = "href" } = Astro.props;
+const { variant = "primary", hover = "hover", left = "red", right = "", href = "href", target = "_self" } = Astro.props;
 import { Image } from "astro:assets";
 
 const buttonStyling = "";
@@ -16,7 +16,8 @@ const variantClasses = {
 // I cards bruges nothover
 const hoverClasses = {
   hover: "flex hover:scale-105 transition-transform cursor-pointer",
-  hoverheader: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-brown-800 transition-transform cursor-pointer",
+  hoverheaderbrown: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-brown-800 transition-transform cursor-pointer",
+  hoverheaderyellow: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-yellow-500 transition-transform cursor-pointer",
   nothover: "flex",
   footerhover: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-yellow-500 transition-transform cursor-pointer",
 };
@@ -41,7 +42,7 @@ const rightClasses = {
     <div class:list={[rightClasses[right]]} class=""></div>
   </div>
 </div> -->
-<a href={href}>
+<a href={href} target={target}>
   <div class="flex">
     <div class:list={[hoverClasses[hover]]}>
       <div class:list={[leftClasses[left]]} class=""></div>
