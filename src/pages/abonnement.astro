@@ -1,1 +1,45 @@
-<article class="max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] m-auto"></article>
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Abonnement from "../components/card_abonnement.astro";
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import figure_blue from "../assets/images/section_1.svg";
+---
+
+<MainLayout title="Titel">
+  <article class="max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] m-auto space-y-8xl my-xl lg:space-y-12xl lg:my-8xl">
+    <section>
+      <h1 class="text-h1_m font-display text-brown-800 font-bold pb-xl lg:text-h1_d lg:pb-8xl">Vælg dit abonnement</h1>
+      <div class="relative">
+        <Image class="flip_horisontal w-full" src={figure_blue} alt="Blå bue" />
+        <div class="bg-blue-500 h-[328px]"></div>
+        <Image class="flip_vertikal w-full" src={figure_blue} alt="Blå bue" />
+      </div>
+      <div class="absolute top-[600px] grid gap-l md:grid-cols-2 lg:gap-3xl max-w-[818px]">
+        <Abonnement url="#" badge="false" type="Basis" pris="199" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="cross_red.svg" iconalt4="Rødt kryds-ikon" icon5="cross_red.svg" iconalt5="Rødt kryds-ikon" />
+        <Abonnement url="#" badge="true" type="Plus" pris="299" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="check_black.svg" iconalt4="Sort check-ikon" icon5="check_black.svg" iconalt5="Sort check-ikon" />
+      </div>
+
+      <!-- <Image class="flip_horisontal w-full" src={figure_blue} alt="Blå bue" />
+      <div class="bg-blue-500 grid gap-l md:grid-cols-2 lg:gap-3xl max-w-[818px] mx-auto">
+        <Abonnement url="#" badge="false" type="Basis" pris="199" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="cross_red.svg" iconalt4="Rødt kryds-ikon" icon5="cross_red.svg" iconalt5="Rødt kryds-ikon" />
+        <Abonnement url="#" badge="true" type="Plus" pris="299" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="check_black.svg" iconalt4="Sort check-ikon" icon5="check_black.svg" iconalt5="Sort check-ikon" />
+      </div>
+      <Image class="flip_vertikal w-full" src={figure_blue} alt="Blå bue" /> -->
+    </section>
+    <section class="space-y-3xl max-w-[44rem] lg:space-y-8xl">
+      <div class="space-y-m">
+        <h2 class="text-h2_m font-display text-brown-800 font-bold lg:text-h2_d">Om konceptet</h2>
+        <p class="text-p font-sans text-neutrals-950 font-regular">Hos Det Kollektive Klædeskab skaber vi et cirkulært klædeskab, hvor tøj får nyt liv. Dit skab er fyldt med skatte, som fortjener at blive brugt og elsket igen. Vi bytter tøj med hinanden og lader det fortsætte sin rejse.</p>
+        <Button left="red_l" right="red_r" hover="hover" variant="primary">Sådan gør du</Button>
+      </div>
+      <div class="space-y-m">
+        <h2 class="text-h2_m font-display text-brown-800 font-bold lg:text-h2_d">Hvilket abonnement skal du vælge?</h2>
+        <p class="text-p font-sans text-neutrals-950 font-regular">
+          Med et månedligt abonnement hos Det Kollektive Klædeskab kan du forny din garderobe ved at bytte dit tøj til nyt. Du melder dig ind online, opnår point for dit brugte tøj og bytter tøj for dine point. Fordelen ved et Plus abonnement er, at du har mulighed for at benytte og bytte i alle vores butikker. Derudover er abonnementet lavet til
+          dig, som mest ønsker at få nyt genbrugstøj, og som ikke har meget hjemme i dit private klædeskab, som kan byttes med. Hver måned får du nemlig 50 bonuspoint tildelt til din profil.
+        </p>
+      </div>
+    </section>
+  </article>
+</MainLayout>
