@@ -5,11 +5,41 @@ import Accordion from "../components/Accordion.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import large2 from "../assets/images/large_2.webp";
+import figure1 from "../assets/images/figure_1.webp";
+import figure_blue from "../assets/images/figure_blue.svg";
+import figure_brown from "../assets/images/figure_brown.svg";
 import SecondaryLayout from "../layouts/SecondaryLayout.astro";
 ---
 
-<SecondaryLayout title="Titel">
+<MainLayout title="Titel">
   <article class="max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] m-auto">
+    <section class="lg:grid lg:grid-cols-2">
+      <div>
+        <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 pb-3xl">Koncept</h1>
+        <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pb-s">Et cirkulært klædeskab</h3>
+        <div class="space-y-sm">
+          <p>Hos Det Kollektive Klædeskab skaber vi et cirkulært klædeskab, hvor tøj får nyt liv. Dit skab er fyldt med skatte, som fortjener at blive brugt og elsket igen. Vi bytter tøj med hinanden og lader det fortsætte sin rejse.</p>
+          <p>Med et månedligt abonnement kan du bytte op til 10 stykker tøj ad gangen. Et plus-abonnement giver dig mulighed for at benytte alle Klædeskabe, og du får 50 bonuspoint hver måned.</p>
+          <p>Efter du har købt et medlemsskab og oprettet en profil kan du nemt tage dine skjorter, bukser eller jakker med til os, få point for dem og tage nyt genbrugstøj med hjem. Vi vurderer tøjet ud fra kvalitet, stand og efterspørgsel, så du får point, der matcher værdien.</p>
+          <p>Vil du vide mere, så besøg vores <Link variant="paragraphlinks" hover="hoverheaderbrown">FAQ lige her.</Link></p>
+        </div>
+        <div class="pt-2xl">
+          <Button left="red_l" right="red_r" hover="hover" variant="primary">Se abonnementer</Button>
+        </div>
+      </div>
+      <div>
+        <Image class="" src={figure1} alt="Gruppebillede" />
+        <!-- <Image class="" src={figure_blue} alt="Gruppebillede" />
+        <Image class="" src={figure_brown} alt="Gruppebillede" /> -->
+      </div>
+    </section>
+    <section>
+      <!-- 5 steps sektion -->
+    </section>
+    <section class="!-max-w-0">
+      <Image class="" src={large2} alt="Gruppebillede" />
+    </section>
     <section class="lg:grid lg:grid-cols-2 lg:gap-xl">
       <div>
         <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 text-right">Ofte stillede spørgsmål</h1>
@@ -31,7 +61,7 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
       </div>
     </section>
   </article>
-</SecondaryLayout>
+</MainLayout>
 
 <!-- <script>
   import fitty from "fitty";
