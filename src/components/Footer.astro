@@ -1,6 +1,48 @@
 ---
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import figure_blue from "../assets/images/section_1.svg";
+import logo from "../assets/images/logo.svg";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
-</div>
-  
+
+<article>
+  <Image class="flip_horisontal w-full" src={figure_blue} alt="Blå bue" />
+  <section class="bg-blue-500 py-2xl space-y-2xl">
+    <div class="max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] m-auto flex flex-col gap-2xl lg:flex-row lg:justify-between">
+      <div class="space-y-s">
+        <h5 class="text-h5_m font-bold font-sans lg:text-h5_d text-yellow-500">Info</h5>
+        <p class="text-p text-yellow-500">Kontakt</p>
+        <p class="text-p text-yellow-500">Åbningstider</p>
+        <p class="text-p text-yellow-500">Butikker</p>
+        <p class="text-p text-yellow-500">FAQ</p>
+        <p class="text-p text-yellow-500">Medlemsbetingelser</p>
+        <p class="text-p text-yellow-500">Handelsbetingelser</p>
+        <p class="text-p text-yellow-500">Privatlivspolitik</p>
+        <p class="text-p text-yellow-500">Cookies</p>
+      </div>
+      <div class="space-y-s">
+        <h5 class="text-h5_m font-bold font-sans lg:text-h5_d text-yellow-500">Følg os</h5>
+        <p class="text-p text-yellow-500">Instagram</p>
+        <p class="text-p text-yellow-500">TikTok</p>
+      </div>
+      <div class="space-y-s">
+        <h5 class="text-h5_m font-bold font-sans lg:text-h5_d text-yellow-500">Det Kollektive Klædeskab</h5>
+        <p class="text-p text-yellow-500">Istedgade 79, 1650 København V</p>
+        <p class="text-p text-yellow-500">kontakt@detkollektiveklaedeskab.dk</p>
+        <p class="text-p text-yellow-500">tlf. 60 58 17 35</p>
+        <p class="text-p text-yellow-500">CVR: 40402160</p>
+      </div>
+      <div class="space-y-m">
+        <div class="space-y-s">
+          <h5 class="text-h5_m font-bold font-sans lg:text-h5_d text-yellow-500">Nyhedsbrev</h5>
+          <p class="text-p text-yellow-500">Skriv din email og få nyheder<br />sendt løbende.</p>
+        </div>
+        <form class="space-y-s" name="nyhedsbrev" netlify>
+          <input class="rounded-border-radius-11 border-none py-s px-m w-full bg-neutrals-50" id="email" name="email" type="email" placeholder="andersandersen@mail.dk" />
+          <Button left="red_l" right="red_r" hover="hover" variant="primary">Indsend</Button>
+        </form>
+      </div>
+    </div>
+    <Image class="w-full max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] m-auto" src={logo} alt="Logo" />
+  </section>
+</article>
