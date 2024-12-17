@@ -10,6 +10,7 @@ import large2 from "../assets/images/large_2.webp";
 import large3 from "../assets/images/large_3.webp";
 import figure1 from "../assets/images/figure_1.webp";
 import diagram from "../assets/images/diagram.svg";
+import pokal from "../assets/images/pokal.svg";
 import figure_blue from "../assets/images/figure_blue.svg";
 import figure_brown from "../assets/images/figure_brown.svg";
 import SecondaryLayout from "../layouts/SecondaryLayout.astro";
@@ -36,7 +37,18 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
         <Image class="" src={figure_brown} alt="Gruppebillede" /> -->
       </div>
     </section>
-    <section></section>
+    <section>
+      <div class="grid grid-cols-2 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+        <div>
+          <Image class="" src={pokal} alt="Gruppebillede" />
+        </div>
+        <div>
+          <h2 class="text-h3_m md:text-h3_d font-display text-neutrals-50">Tøj er den mest populære genbrugsvare</h2>
+          <p class="text-p font-sans text-neutrals-50">I de sidste 12 måneder har 44% af danskerne købt genbrugstøj. Den næsthøjeste kategori er boligtilbehør på 27%.</p>
+          <Link variant="paragraphlinks" hover="parapraphhover" href="https://guide.dba.dk/publikationer/genbrugsindekset/2024/">Kilde: guide.dba.dk</Link>
+        </div>
+      </div>
+    </section>
     <section class="lg:grid lg:grid-cols-2 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <div>
         <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800">Vi gør en forskel</h3>
