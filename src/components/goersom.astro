@@ -1,0 +1,25 @@
+---
+// Astro-komponent med Alpine.js
+import "animate.css";
+---
+
+<!-- Chat-GPT, hjælp til at udskifte navne og byer -->
+<div x-data="{ 
+      names: ['Anders', 'Sofie', 'Amalie', 'Gurli', 'Laura', 'Magnus', 'Kaja'],
+      places: ['i Roskilde', 'på Nørrebro', 'på Vesterbro', 'i Aarhus'],
+      currentNameIndex: 0,
+      currentPlaceIndex: 0,
+      get currentName() { return this.names[this.currentNameIndex] },
+      get currentPlace() { return this.places[this.currentPlaceIndex] },
+      startRotation() {
+        setInterval(() => {
+          // Opdater navne
+          this.currentNameIndex = (this.currentNameIndex + 1) % this.names.length;
+          this.currentPlaceIndex = (this.currentPlaceIndex + 1) % this.places.length;
+        }, 2000); // Skifter navn hvert 2. sekund
+      }
+    }" x-init="startRotation()" class="flex items-center justify-center h-screen">
+  <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800">
+    Gør som <span class="text-blue-500 animate__animated animate__flipInX" x-text="currentName"></span>, bliv en del af klædeskabet <span class="text-red-500 animate__animated animate__flipInX" x-text="currentPlace"></span>
+  </h1>
+</div>

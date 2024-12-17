@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Goersom from "../components/goersom.astro";
 import Accordion from "../components/Accordion.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
@@ -8,6 +9,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 import large2 from "../assets/images/large_2.webp";
 import large3 from "../assets/images/large_3.webp";
 import figure1 from "../assets/images/figure_1.webp";
+import diagram from "../assets/images/diagram.svg";
 import figure_blue from "../assets/images/figure_blue.svg";
 import figure_brown from "../assets/images/figure_brown.svg";
 import SecondaryLayout from "../layouts/SecondaryLayout.astro";
@@ -15,7 +17,7 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
 
 <MainLayout title="Titel">
   <article class="">
-    <section class="lg:grid lg:grid-cols-2 gap-10 max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] mx-auto md:mx-xl">
+    <section class="lg:grid lg:grid-cols-2 gap-10 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <div>
         <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 pb-3xl">Om os</h1>
         <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pb-s">Siden 2014</h3>
@@ -35,7 +37,7 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
       </div>
     </section>
     <section></section>
-    <section class="lg:grid lg:grid-cols-2 max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] mx-auto md:mx-xl">
+    <section class="lg:grid lg:grid-cols-2 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <div>
         <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800">Vi gør en forskel</h3>
         <p class="text-p font-sans">Tekstilindustrien står for op mod 10% af verdens samlede CO2-udledning. Det gør den til en af de mest forurenende industrier.</p>
@@ -48,8 +50,19 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
         <p class="text-p font-sans">Vi drømmer om at skabe en ny måde at forbruge på, hvor deling og genbrug bliver normen. Sammen kan vi bygge en fremtid, hvor det muligt at udtrykke sin personlige stil og samtidigt passe på planeten.</p>
       </div>
     </section>
-    <section class="!-max-w-0">
+    <section class="">
       <Image class="" src={large3} alt="Gruppebillede" />
+    </section>
+    <section>
+      <div class="grid grid-cols-2 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+        <div>
+          <h2 class="text-h3_m md:text-h3_d font-display text-neutrals-50">Flere dansker køber og sælger genbrug</h2>
+          <p class="text-p font-sans text-neutrals-50">I 2024 har 81% af danskerne enten købt og/eller solgt en eller flere genbrugsvarer. Dette har været gradvist stigende siden 2016.</p>
+        </div>
+        <div>
+          <Image class="" src={diagram} alt="Gruppebillede" />
+        </div>
+      </div>
     </section>
   </article>
 </MainLayout>
