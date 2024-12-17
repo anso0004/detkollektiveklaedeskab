@@ -6,28 +6,31 @@ import Card_forms from "../components/card_forms.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import line from "../assets/images/line.svg";
-import line_mobile from "../assets/images/line_mobile.svg";
+import line_mobile from "../assets/images/linemobil.svg";
+import linemd from "../assets/images/linemd.svg";
 import CardForms from "../components/card_forms.astro";
 ---
 
 <MainLayout title="Titel">
   <section class="max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto mb-13xl">
-    <div class="flex flex-cols md:mb-3xl">
-      <Button variant="progres">1</Button>
-      <Image class="hidden md:flex" src={line} alt="Gruppebillede" />
-      <Image class="md:hidden" src={line_mobile} alt="Gruppebillede" />
-      <p class="w-s h-s md:w-ml md:h-ml border-border-2 font-bold border-brown-800 rounded-border-radius-full text-p text-brown-800 flex items-center justify-center">2</p>
-      <Image class="hidden md:flex" src={line} alt="Gruppebillede" />
-      <Image class="md:hidden" src={line_mobile} alt="Gruppebillede" />
+    <div class="flex flex-cols mb-l md:mb-3xl">
+      <Link variant="progres" hover="hover" href="/koeb_basis1">1</Link>
+      <Image class="hidden lg:flex" src={line} alt="Gruppebillede" />
+      <Image class="hidden md:flex lg:hidden" src={linemd} alt="Gruppebillede" />
+      <Image class="lg:hidden md:hidden" src={line_mobile} alt="Gruppebillede" />
+      <p class="w-ml h-ml md:w-ml md:h-ml border-border-2 font-bold border-brown-800 rounded-border-radius-full text-p text-brown-800 flex items-center justify-center">2</p>
+      <Image class="hidden lg:flex" src={line} alt="Gruppebillede" />
+      <Image class="hidden md:flex lg:hidden" src={linemd} alt="Gruppebillede" />
+      <Image class="lg:hidden md:hidden" src={line_mobile} alt="Gruppebillede" />
       <p class="w-ml h-ml border-border-2 font-bold border-brown-800 rounded-border-radius-full text-p text-brown-800 flex items-center justify-center">3</p>
     </div>
-    <section class="mb-xl">
-      <h2 class="text-h2_m lg:text-h2_d font-display text-brown-800 md:pb-sm">Vælg butik</h2>
+    <section class="mb-3xl md:mb-xl">
+      <h2 class="text-h2_m lg:text-h2_d font-display text-brown-800 mb-m md:mb-sm">Vælg butik</h2>
       <p class="text-p font-sans">Vælg den butik nedenfor, som du ønsker at blive tilknyttet.</p>
       <p class="text-p font-sans">Med et Basis-abonnement, er den valgte butik den eneste butik, som du kan benytte.</p>
     </section>
 
-    <section class="grid grid-cols-2 gap-sm md:gap-ml md:mb-xl lg:max-w-[40rem]" x-data="{ selected: '' }">
+    <section class="grid grid-cols-2 gap-sm md:gap-ml md:mb-xl lg:max-w-[40rem] mb-3xl" x-data="{ selected: '' }">
       <!-- Hjælp fra Chat-GPT -->
       <!-- Roskilde -->
       <p class="md:rounded-border-radius-43 rounded-border-radius-11 border-none md:py-l py-m px-m md:min-w-[16.125rem] text-h5_m font-bold font-sans md:text-h5_d cursor-pointer flex items-center justify-center" :class="{ 'bg-green-500 text-white': selected === 'roskilde', 'bg-neutrals-50': selected !== 'roskilde' }" x-on:click="selected = 'roskilde'">Roskilde<span class="nowrap"><img x-show="selected === 'roskilde'" src="/check_darkgreen.svg" alt="Checkmark ikon" class="h-6 w-6 ml-2" /></span></p>
