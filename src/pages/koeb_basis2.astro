@@ -3,6 +3,7 @@ import Forms from "../components/Forms.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Card_forms from "../components/card_forms.astro";
 import { Image } from "astro:assets";
 import line from "../assets/images/line.svg";
 import line_mobile from "../assets/images/linemobil.svg";
@@ -11,15 +12,7 @@ import linemd from "../assets/images/linemd.svg";
 
 <MainLayout title="Titel">
   <section class="max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-    <h2 class="text-h2_m lg:text-h2_d font-display text-brown-800">Indtast kontaktoplysninger</h2>
-    <!-- <div class="flex flex-cols">
-      <Button variant="progres">1</Button>
-      <Image class="" src={line} alt="Gruppebillede" />
-      <Button variant="progres">2</Button>
-      <Image class="" src={line} alt="Gruppebillede" />
-      <p class="w-ml h-ml border-border-2 font-bold border-brown-800 rounded-border-radius-full text-p text-brown-800 flex items-center justify-center">3</p>
-    </div> -->
-    <div class="flex flex-cols mb-l md:mb-3xl">
+    <div class="flex flex-cols mb-l md:mb-3xl justify-center">
       <Link variant="progres" hover="hover" href="/koeb_basis1">1</Link>
       <Image class="hidden lg:flex" src={line} alt="Gruppebillede" />
       <Image class="hidden md:flex lg:hidden" src={linemd} alt="Gruppebillede" />
@@ -30,8 +23,14 @@ import linemd from "../assets/images/linemd.svg";
       <Image class="lg:hidden md:hidden" src={line_mobile} alt="Gruppebillede" />
       <p class="w-ml h-ml border-border-2 font-bold border-brown-800 rounded-border-radius-full text-p text-brown-800 flex items-center justify-center">3</p>
     </div>
-    <article class="">
-      <Forms />
+    <h3 class="text-h3_m lg:text-h3_d font-display md:text-center text-brown-800 mb-2xl">Indtast kontaktoplysninger</h3>
+    <article class="md:grid md:grid-cols-2 md:gap-4xl md:grid-rows-1">
+      <div class="col-start-1 md:col-start-2 mb-4xl">
+        <Forms />
+      </div>
+      <div class="col-start-2 md:col-start-1 md:row-start-1 mb-4xl">
+        <Card_forms type="Basis" , butik="Roskilde" , point="0" , uden_moms="159,20" , moms="39,80" , ialt="199" />
+      </div>
     </article>
-  </section>
-</MainLayout>
+  </section></MainLayout
+>
