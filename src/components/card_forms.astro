@@ -1,0 +1,38 @@
+---
+const { type = "", butik = "", point = "", uden_moms = "", moms = "", ialt = "" } = Astro.props;
+---
+
+<article class="card bg-neutrals-50 rounded-border-radius-43 p-ml space-y-ml @container">
+  <div class="space-y-xxs">
+    <h4 class="text-h4_m text-neutrals-950 font-bold font-sans md:text-h4_d">{type}</h4>
+    <h5 class="text-h5_m text-neutrals-950 font-bold font-sans md:text-h5_d">Abonnement</h5>
+  </div>
+  <div class="space-y-m">
+    <div class="space-y-xs">
+      <h6 class="text-h6_m text-neutrals-950 font-bold font-sans md:text-h6_d">Tilknuttet butik</h6>
+      <p class="text-p text-neutrals-950 font-regular font-sans">{butik}</p>
+    </div>
+    <div class="space-y-xs">
+      <h6 class="text-h6_m text-neutrals-950 font-bold font-sans md:text-h6_d">Månedligt abonnement</h6>
+      <p class="text-p text-neutrals-950 font-regular font-sans">Betales d. 1. i måneden</p>
+    </div>
+    <div class="space-y-xs">
+      <h6 class="text-h6_m text-neutrals-950 font-bold font-sans md:text-h6_d">Månedlige bonuspoint</h6>
+      <p class="text-p text-neutrals-950 font-regular font-sans">{point} bonuspoint</p>
+    </div>
+  </div>
+  <div class="space-y-xs">
+    <div class="flex justify-between">
+      <p class="text-p text-neutrals-950 font-regular font-sans">I alt (ekskl. moms)</p>
+      <p class="text-p text-neutrals-950 font-regular font-sans">{uden_moms} kr.</p>
+    </div>
+    <div class="flex justify-between">
+      <p class="text-p text-neutrals-950 font-regular font-sans">Moms 25%</p>
+      <p class="text-p text-neutrals-950 font-regular font-sans">{moms} kr.</p>
+    </div>
+    <div class="flex justify-between">
+      <h5 class="text-h5_m text-neutrals-950 font-bold font-sans md:text-h5_d">I alt:</h5>
+      <h5 class="text-h5_m text-neutrals-950 font-bold font-sans md:text-h5_d">{ialt} kr.</h5>
+    </div>
+  </div>
+</article>
