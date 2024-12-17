@@ -14,6 +14,7 @@ import pokal from "../assets/images/pokal.svg";
 import figure_blue from "../assets/images/figure_blue.svg";
 import figure_brown from "../assets/images/figure_brown.svg";
 import SecondaryLayout from "../layouts/SecondaryLayout.astro";
+import section_blue from "../assets/images/section_1.svg";
 ---
 
 <MainLayout title="Titel">
@@ -37,15 +38,18 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
         <Image class="" src={figure_brown} alt="Gruppebillede" /> -->
       </div>
     </section>
-    <section>
-      <div class="grid grid-cols-2 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-        <div>
-          <Image class="" src={pokal} alt="Gruppebillede" />
-        </div>
-        <div>
-          <h2 class="text-h3_m md:text-h3_d font-display text-neutrals-50">Tøj er den mest populære genbrugsvare</h2>
-          <p class="text-p font-sans text-neutrals-50">I de sidste 12 måneder har 44% af danskerne købt genbrugstøj. Den næsthøjeste kategori er boligtilbehør på 27%.</p>
-          <Link variant="paragraphlinks" hover="parapraphhover" href="https://guide.dba.dk/publikationer/genbrugsindekset/2024/">Kilde: guide.dba.dk</Link>
+    <section class="py-12xl">
+      <div class="z-30">
+        <Image class="flip_horisontal w-full -mb-1" src={section_blue} alt="Blå bue" />
+        <div class="bg-blue-500 h-[600px] md:h-[528px]"></div>
+        <Image class="flip_horisontal flip_vertikal w-full -mt-1" src={section_blue} alt="Blå bue" />
+      </div>
+      <div class="mt-[-800px] md:mt-[-550px] lg:mt-[-600px] xl:mt-[-680px] 2xl:mt-[-750px] grid gap-m md:gap-9xl md:grid-cols-5 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+        <Image class="z-50 md:col-span-2" src={pokal} alt="Pokal" />
+        <div class="z-50 space-y-m md:col-span-3 md:content-center">
+          <h2 class="text-h2_m md:text-h2_d font-display text-neutrals-50 fitty">Tøj er den mest <br /> populære <br /> genbrugsvare</h2>
+          <p class="text-p font-sans text-neutrals-50 max-w-[400px] pb-m">I de sidste 12 måneder har 44% af danskerne købt genbrugstøj. Den næsthøjeste kategori er boligtilbehør på 27%.</p>
+          <Link variant="paragraphlinks2" hover="parapraphhover" href="https://guide.dba.dk/publikationer/genbrugsindekset/2024/">Kilde: guide.dba.dk</Link>
         </div>
       </div>
     </section>
@@ -65,16 +69,28 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
     <section class="">
       <Image class="" src={large3} alt="Gruppebillede" />
     </section>
-    <section>
-      <div class="grid grid-cols-2 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-        <div>
-          <h2 class="text-h3_m md:text-h3_d font-display text-neutrals-50">Flere dansker køber og sælger genbrug</h2>
-          <p class="text-p font-sans text-neutrals-50">I 2024 har 81% af danskerne enten købt og/eller solgt en eller flere genbrugsvarer. Dette har været gradvist stigende siden 2016.</p>
+    <section class="pb-19xl">
+      <div class="z-30">
+        <Image class="flip_horisontal w-full -mb-1" src={section_blue} alt="Blå bue" />
+        <div class="bg-blue-500 h-[750px] md:h-[528px] 2xl:h-[728px]"></div>
+        <Image class="flip_horisontal flip_vertikal w-full -mt-1" src={section_blue} alt="Blå bue" />
+      </div>
+      <div class="mt-[-740px] md:mt-[-480px] lg:mt-[-550px] xl:mt-[-620px] 2xl:mt-[-800px] grid md:grid-cols-5 md:gap-9xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+        <div class="space-y-m pb-m md:col-span-3 md:content-center">
+          <h2 class="text-h2_m md:text-h2_d font-display text-neutrals-50 fitty">Flere dansker <br /> køber og sælger <br /> genbrug</h2>
+          <p class="text-p font-sans text-neutrals-50 max-w-[450px]">I 2024 har 81% af danskerne enten købt og/eller solgt en eller flere genbrugsvarer. Dette har været gradvist stigende siden 2016.</p>
         </div>
-        <div>
-          <Image class="" src={diagram} alt="Gruppebillede" />
-        </div>
+        <Image class="w-full md:col-span-2" src={diagram} alt="Diagram" />
       </div>
     </section>
   </article>
 </MainLayout>
+
+<script>
+  import fitty from "fitty";
+  fitty(".fitty");
+  window.addEventListener("load", (event) => {
+    fitty.fitAll();
+  });
+  fitty(".fittysmall", { minSize: 18, maxSize: 54 });
+</script>
