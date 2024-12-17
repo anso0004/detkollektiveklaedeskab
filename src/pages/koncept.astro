@@ -1,6 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
 import Accordion from "../components/Accordion.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
@@ -25,14 +24,11 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
           <p class="text-p font-sans">Vil du vide mere, så besøg vores <Link variant="paragraphlinks" hover="hoverheaderbrown">FAQ lige her.</Link></p>
         </div>
         <div class="py-2xl">
-          <!-- <Button left="red_l" right="red_r" hover="hover" variant="primary">Se abonnementer</Button> -->
           <Link left="red_l" right="red_r" hover="hover" variant="primary">Se abonnementer</Link>
         </div>
       </div>
       <div>
         <Image class="" src={figure1} alt="Figur med pige" />
-        <!-- <Image class="" src={figure_blue} alt="Gruppebillede" />
-        <Image class="" src={figure_brown} alt="Gruppebillede" /> -->
       </div>
     </section>
     <section>
