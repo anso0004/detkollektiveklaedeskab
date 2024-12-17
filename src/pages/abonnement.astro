@@ -7,15 +7,15 @@ import figure_blue from "../assets/images/section_1.svg";
 ---
 
 <MainLayout title="Titel">
-  <article class="max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] m-auto space-y-8xl my-xl lg:space-y-12xl lg:my-8xl">
-    <section>
+  <article class="max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] mx-auto space-y-8xl my-xl lg:space-y-12xl lg:my-8xl">
+    <section class="">
       <h1 class="text-h1_m font-display text-brown-800 font-bold pb-xl lg:text-h1_d lg:pb-8xl">Vælg dit abonnement</h1>
       <div class="relative">
         <Image class="flip_horisontal w-full" src={figure_blue} alt="Blå bue" />
-        <div class="bg-blue-500 h-[328px]"></div>
+        <div class="bg-blue-500 h-[1200px] lg:h-[328px]"></div>
         <Image class="flip_vertikal w-full" src={figure_blue} alt="Blå bue" />
       </div>
-      <div class="absolute top-[600px] grid gap-l md:grid-cols-2 lg:gap-3xl max-w-[818px]">
+      <div class="absolute top-[100px] lg:top-[600px] grid gap-l md:grid-cols-2 md:gap-3xl max-w-[818px]">
         <Abonnement url="#" badge="false" type="Basis" pris="199" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="cross_red.svg" iconalt4="Rødt kryds-ikon" icon5="cross_red.svg" iconalt5="Rødt kryds-ikon" />
         <Abonnement url="#" badge="true" type="Plus" pris="299" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="check_black.svg" iconalt4="Sort check-ikon" icon5="check_black.svg" iconalt5="Sort check-ikon" />
       </div>
