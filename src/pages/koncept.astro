@@ -40,16 +40,13 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
     <section class="">
       <Image class="" src={large2} alt="baggrund med pige i klædeskabet" />
     </section>
-    <section class="lg:grid lg:grid-cols-2 lg:gap-xl max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] mx-auto md:mx-xl">
+    <section class="md:grid md:grid-cols-2 md:gap-xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <div>
-        <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 text-right fittysmall">Ofte stillede spørgsmål</h1>
+        <h1 class="text-h1_m md:text-h2_d lg:text-h1_d font-display text-brown-800 text-right fittysmall">Ofte <br />stillede <br /> spørgsmål</h1>
       </div>
       <div>
         <Accordion txt="Hvordan kommer jeg ind i butikken?" size="desktop">
-          <p class="text-p text-neutrals-950 pt-sm">
-            Når du er medlem og kommer i vores butikker, vil du kunne komme til en butik, der er helt klar til dig, men hvor døren er låst. Da låser du dig ind med en kode eller ved at bruge nøglen, som er i en nøgleboks. Den aktuelle kode finder du i appen. Vær opmærksom på, at du kun kan og må lukke dig selv ind i butikken i vores åbningstid, som
-            du finder her. Uden for åbningstiden har vi alarm på.
-          </p>
+          <p class="text-p text-neutrals-950 pt-sm">Når du er medlem og kommer i vores butikker, vil du kunne komme til en butik, der er helt klar til dig, men hvor døren er låst. Da låser du dig ind med en kode eller ved at bruge nøglen, som er i en nøgleboks. Den aktuelle kode finder du i appen. Vær opmærksom på, at du kun kan og må lukke dig selv ind i butikken i vores åbningstid, som du finder her. Uden for åbningstiden har vi alarm på.</p>
         </Accordion>
         <Accordion txt="Hvordan afleverer jeg mit tøj?" size="desktop">
           <p class="text-p text-neutrals-950 pt-sm">Når du afleverer tøj, lægger du tøjet i en af vores kasser, tager en white board marker og udfylder sedlen på kassen med dit fulde navn, telefonnummer og dags dato og sætter kassen på plads igen. Du må aflevere 10 stykker tøj ad gangen.</p>
@@ -58,10 +55,7 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
           <p class="text-p text-neutrals-950 pt-sm">I løbet af en uge kan du se de point, du har fået for tøjet i din app. Appen hedder Det Kollektive Klædeskab og kan downloades til både Apple og Android. Du logger ind i appen med den mailadresse, som du brugte, da du meldte dig ind i Klædeskabet.</p>
         </Accordion>
         <Accordion txt="Hvordan får jeg tøj med hjem?" size="desktop">
-          <p class="text-p text-neutrals-950 pt-sm">
-            Når du har fundet det tøj, som du vil have med hjem, tager du det med til disken, hvor der vil være en specifik vejledning, som guider dig. Du tager tøjet af bøjlerne og lægger bøjlerne på deres plads. Du klipper pointmærkerne af, lægger pointene sammen og lægger pointmærker og små plastikdimser på plads. Så åbner du din app, trykker på
-            ”mine point”, derefter trykker du på ”hæv” og indtaster det pointbeløb, du har brugt. Så godkender du, og pointene er straks hævet fra din saldo.
-          </p>
+          <p class="text-p text-neutrals-950 pt-sm">Når du har fundet det tøj, som du vil have med hjem, tager du det med til disken, hvor der vil være en specifik vejledning, som guider dig. Du tager tøjet af bøjlerne og lægger bøjlerne på deres plads. Du klipper pointmærkerne af, lægger pointene sammen og lægger pointmærker og små plastikdimser på plads. Så åbner du din app, trykker på ”mine point”, derefter trykker du på ”hæv” og indtaster det pointbeløb, du har brugt. Så godkender du, og pointene er straks hævet fra din saldo.</p>
           <p class="pt-m">Og så tager du tøjet med hjem og nyder de gode fund. Nemt og meningsfuldt.</p>
         </Accordion>
       </div>
@@ -75,5 +69,5 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
   window.addEventListener("load", (event) => {
     fitty.fitAll();
   });
-  fitty(".fittysmall", { minSize: 18, maxSize: 115 });
+  fitty(".fittysmall", { minSize: 18, maxSize: 81 });
 </script>
