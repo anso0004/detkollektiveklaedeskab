@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import icon_ckeck_black from "../assets/images/icon_check_black.svg";
 import icon_cross_red from "../assets/images/icon_cross_red.svg";
 import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
 ---
 
 <article class="card bg-neutrals-50 rounded-border-radius-43 @container hover:scale-105 transition-transform cursor-pointer w-[20.375rem] lg:w-[23.563rem]">
@@ -46,7 +47,7 @@ import Button from "../components/Button.astro";
         </div>
         <h5 class="h5_m font-sans font-bold lg:text-h5_d"><span>{pris}</span> kr./md.</h5>
       </div>
-      <Button left="red_l" right="red_r" hover="nothover" variant="primary">Køb abonnement</Button>
+      <Link left="red_l" right="red_r" hover="nothover" variant="primary">Køb abonnement</Link>
     </section>
   </a>
 </article>
