@@ -3,39 +3,41 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Accordion from "../components/Accordion.astro";
 import Link from "../components/Link.astro";
+import Butik from "../components/card_butik.astro";
 import Personale from "../components/Personale.astro";
 import { Image } from "astro:assets";
+import figure_blue from "../assets/images/section_1.svg";
 ---
 
 <MainLayout>
   <article class="">
-    <section class="max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+    <section class="pb-8xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <div class="">
-        <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 pb-3xl">Kontakt</h1>
-        <div class="md:grid grid-cols-2">
+        <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 pb-l md:pb-3xl">Kontakt</h1>
+        <div class="md:grid md:grid-cols-2 gap-14xl">
           <div>
-            <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pb-s">Åbningstider:</h3>
+            <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pb-m">Åbningstider:</h3>
             <div class="flex gap-l">
               <div>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">Mandag</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">Tirsdag</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">Onsdag</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">Torsdag</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">Fredag</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">Lørdag</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">Søndag</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Mandag</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Tirsdag</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Onsdag</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Torsdag</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Fredag</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Lørdag</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Søndag</h5>
               </div>
               <div>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">Lukket</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">10-18</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">15-21</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">10-18</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">10-18</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">15-18</h5>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-brown-800 md:pb-s">Lukket</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Lukket</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">10-18</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">15-21</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">10-18</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">10-18</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">15-18</h5>
+                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Lukket</h5>
               </div>
             </div>
-            <div class="md:pt-s">
+            <div class="md:pt-m">
               <p class="text-p text-neutrals-950 pt-sm">Åbningstider gælder også for selvbetjening. Det vil sige, at du kan låse dig ind i vores butikker i den officielle åbningstid.</p>
               <p class="text-p text-neutrals-950 pt-sm">Vi har altid lukket på helligdage (inkl. 1. maj og 5. juni).</p>
               <p class="text-p text-neutrals-950 pt-sm">Vi holder sommerferielukket i uge 29 og 30.</p>
@@ -44,7 +46,7 @@ import { Image } from "astro:assets";
           </div>
           <div>
             <div>
-              <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pt-l pb-m md:pb-s md:pt-0">Kontakt:</h3>
+              <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pt-l pb-m md:pb-s md:pt-0">Email:</h3>
               <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutral-950 md:pb-xxs">København & Roskilde:</h5>
               <p class="text-p text-neutrals-950 pt-xxs md:pt-sm">kontakt@detkollektiveklaedeskab.dk</p>
               <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutral-950 pt-m md:pb-xxs">Aarhus:</h5>
@@ -52,19 +54,30 @@ import { Image } from "astro:assets";
             </div>
             <div>
               <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pt-l pb-m md:pb-s">Telefon:</h3>
-              <p class="text-p text-neutrals-950 pt-xxs md:pt-sm">+45 60 58 17 35</p>
+              <p class="text-p text-neutrals-950 md:pt-sm">+45 60 58 17 35</p>
               <p class="text-p text-neutrals-950 pt-xxs md:pt-sm">Kan kontaktes hverdage mellem kl. 8-16.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-      <h2 class="text-h2_m md:text-h2_d font-display text-brown-800 text-center">Find en butik nær dig</h2>
-      <!-- Butikker -->
+    <section class="">
+      <div class="z-10">
+        <Image class="flip_horisontal w-full -mb-1" src={figure_blue} alt="Blå bue" />
+        <div class="bg-blue-500 h-[2200px] md:h-[1100px] xl:h-[500px] 2xl:h-[500px]"></div>
+        <Image class="flip_vertikal w-full -mt-1" src={figure_blue} alt="Blå bue" />
+      </div>
+      <div class="grid mt-[-2200px] md:mt-[-1100px] lg:mt-[-1100px] xl:mt-[-600px] 2xl:mt-[-650px] gap-xl md:gap-5xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+        <h2 class="text-h2_m md:text-h2_d font-display text-neutrals-50 font-bold text-center">Find en butik nær dig</h2>
+        <div class="z-50 grid gap-l md:grid-cols-2 xl:grid-cols-4">
+          <Butik url="#" cardimage="butik_1.webp" cardimagealt="Butiksfacade på Nørrebro" overskrift="Nørrebro" adresse1="Kronborggade 1," adresse2="2200 København N" />
+          <Butik url="#" cardimage="butik_2.webp" cardimagealt="Butiksfacade på Vesterbro" overskrift="Vesterbro" adresse1="Istedgade 79," adresse2="1650 København V" />
+          <Butik url="#" cardimage="butik_3.webp" cardimagealt="Butiksfacade på Roskilde" overskrift="Roskilde" adresse1="Ringstedgade 13," adresse2="4000 Roskilde" />
+          <Butik url="#" cardimage="butik_4.webp" cardimagealt="Butiksfacade på Aarhus" overskrift="Aarhus" adresse1="Nørre Allé 33," adresse2="8000 Aarhus" />
+        </div>
+      </div>
     </section>
-    <section class="max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-      <!-- billeder af ejerne -->
+    <section class="py-10xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <Personale />
     </section>
   </article>
