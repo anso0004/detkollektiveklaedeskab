@@ -3,8 +3,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Accordion from "../components/Accordion.astro";
 import Link from "../components/Link.astro";
+import Butik from "../components/card_butik.astro";
 import Personale from "../components/Personale.astro";
 import { Image } from "astro:assets";
+import figure_blue from "../assets/images/section_1.svg";
 ---
 
 <MainLayout>
@@ -59,9 +61,21 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
-    <section class="max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-      <h2 class="text-h2_m md:text-h2_d font-display text-brown-800 text-center">Find en butik nær dig</h2>
-      <!-- Butikker -->
+    <section class="">
+      <div class="z-10">
+        <Image class="flip_horisontal w-full -mb-1" src={figure_blue} alt="Blå bue" />
+        <div class="bg-blue-500 h-[2200px] md:h-[1100px] xl:h-[500px] 2xl:h-[500px]"></div>
+        <Image class="flip_vertikal w-full -mt-1" src={figure_blue} alt="Blå bue" />
+      </div>
+      <div class="grid mt-[-2200px] md:mt-[-1100px] lg:mt-[-1100px] xl:mt-[-600px] 2xl:mt-[-650px] gap-xl md:gap-5xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+        <h2 class="text-h2_m md:text-h2_d font-display text-neutrals-50 font-bold text-center">Find en butik nær dig</h2>
+        <div class="z-50 grid gap-l md:grid-cols-2 xl:grid-cols-4">
+          <Butik url="#" cardimage="butik_1.webp" cardimagealt="Butiksfacade på Nørrebro" overskrift="Nørrebro" adresse1="Kronborggade 1," adresse2="2200 København N" />
+          <Butik url="#" cardimage="butik_2.webp" cardimagealt="Butiksfacade på Vesterbro" overskrift="Vesterbro" adresse1="Istedgade 79," adresse2="1650 København V" />
+          <Butik url="#" cardimage="butik_3.webp" cardimagealt="Butiksfacade på Roskilde" overskrift="Roskilde" adresse1="Ringstedgade 13," adresse2="4000 Roskilde" />
+          <Butik url="#" cardimage="butik_4.webp" cardimagealt="Butiksfacade på Aarhus" overskrift="Aarhus" adresse1="Nørre Allé 33," adresse2="8000 Aarhus" />
+        </div>
+      </div>
     </section>
     <section class="max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <!-- billeder af ejerne -->
