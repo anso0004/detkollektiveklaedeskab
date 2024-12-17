@@ -6,10 +6,11 @@ import { Image } from "astro:assets";
 import figure_blue from "../assets/images/section_1.svg";
 ---
 
+<!-- max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] mx-auto -->
 <MainLayout title="Titel">
-  <article class="max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] mx-auto space-y-8xl my-xl lg:space-y-12xl lg:my-8xl">
+  <article class="">
+    <h1 class="text-h1_m font-display text-brown-800 font-bold lg:text-h1_d">Vælg dit abonnement</h1>
     <section class="">
-      <h1 class="text-h1_m font-display text-brown-800 font-bold pb-xl lg:text-h1_d lg:pb-8xl">Vælg dit abonnement</h1>
       <div class="relative">
         <Image class="flip_horisontal w-full" src={figure_blue} alt="Blå bue" />
         <div class="bg-blue-500 h-[1200px] lg:h-[328px]"></div>
