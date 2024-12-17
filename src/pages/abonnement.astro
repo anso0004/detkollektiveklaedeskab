@@ -6,27 +6,22 @@ import { Image } from "astro:assets";
 import figure_blue from "../assets/images/section_1.svg";
 ---
 
-<!-- max-w-[20.375rem] md:max-w-[74.5rem] 2xl:max-w-[87rem] mx-auto --><!-- md:mx-xl -->
+<!-- lg:text-h1_d max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto -->
 <MainLayout title="Titel">
   <article class="">
     <h1 class="text-h1_m font-display text-brown-800 font-bold lg:text-h1_d max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">Vælg dit abonnement</h1>
-    <section class="">
-      <div class="">
+    <section class="grid grid-cols-12 lg:grid-rows-12 gap-16">
+      <div class="z-30 col-start-1 row-start-2 col-span-12 row-span-10 lg:row-start-3 bg-blue-50">
         <Image class="flip_horisontal w-full" src={figure_blue} alt="Blå bue" />
-        <div class="bg-blue-500 h-[1200px] lg:h-[328px]"></div>
+        <div class="bg-blue-500 lg:h-[328px]"></div>
         <Image class="flip_vertikal w-full" src={figure_blue} alt="Blå bue" />
       </div>
-      <div class="grid">
+      <div class="z-50 col-start-2 row-start-1 col-span-8 row-span-6 lg:col-start-3 lg:row-start-1 lg:col-span-4 lg:row-span-12">
         <Abonnement url="#" badge="false" type="Basis" pris="199" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="cross_red.svg" iconalt4="Rødt kryds-ikon" icon5="cross_red.svg" iconalt5="Rødt kryds-ikon" />
+      </div>
+      <div class="z-50 col-start-2 row-start-6 col-span-8 row-span-6 lg:col-start-7 lg:row-start-1 lg:col-span-4 lg:row-span-12">
         <Abonnement url="#" badge="true" type="Plus" pris="299" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="check_black.svg" iconalt4="Sort check-ikon" icon5="check_black.svg" iconalt5="Sort check-ikon" />
       </div>
-
-      <!-- <Image class="flip_horisontal w-full" src={figure_blue} alt="Blå bue" />
-      <div class="bg-blue-500 grid gap-l md:grid-cols-2 lg:gap-3xl max-w-[818px] mx-auto">
-        <Abonnement url="#" badge="false" type="Basis" pris="199" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="cross_red.svg" iconalt4="Rødt kryds-ikon" icon5="cross_red.svg" iconalt5="Rødt kryds-ikon" />
-        <Abonnement url="#" badge="true" type="Plus" pris="299" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="check_black.svg" iconalt4="Sort check-ikon" icon5="check_black.svg" iconalt5="Sort check-ikon" />
-      </div>
-      <Image class="flip_vertikal w-full" src={figure_blue} alt="Blå bue" /> -->
     </section>
     <section class="space-y-3xl max-w-[44rem] lg:space-y-8xl">
       <div class="space-y-m">
