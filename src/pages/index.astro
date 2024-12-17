@@ -51,10 +51,41 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
         <Link left="red_l" right="red_r" hover="hover" variant="primary">Find butik</Link>
       </div>
     </section>
-    <section class="grid lg:grid-cols-3 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-      <Anmeldelse url="#" cardimage="anmeldelse_1.webp" cardimagealt="Ung kvinde" overskrift="Sofia, 24 år" underoverskrift="Himmelev, Roskilde" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
-      <Anmeldelse url="#" cardimage="anmeldelse_2.webp" cardimagealt="Ung kvinde" overskrift="Marie, 20 år" underoverskrift="Nørrebro, København" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
-      <Anmeldelse url="#" cardimage="anmeldelse_3.webp" cardimagealt="Ung mand" overskrift="Jonas, 27 år" underoverskrift="Vesterbro, København" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
+    <section class="">
+      <div class="z-30">
+        <Image class="flip_horisontal w-full -mb-1" src={figure_blue} alt="Blå bue" />
+        <div class="bg-blue-500 h-[1800px] md:h-[1800px] lg:h-[550px] xl:h-[450px] 2xl:h-[480px]"></div>
+        <Image class="flip_vertikal w-full -mt-1" src={figure_blue} alt="Blå bue" />
+      </div>
+      <div class="mt-[-1800px] md:mt-[-1800px] lg:mt-[-630px] xl:mt-[-580px] 2xl:mt-[-600px] max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+        <h2 class="text-h2_m font-display font-bold text-neutrals-50 md:text-h2_d text-center mb-xl">Vi deler klædeskab</h2>
+        <div class="z-50 relative grid gap-2xl lg:grid-cols-3">
+          <Anmeldelse
+            url="#"
+            cardimage="anmeldelse_1.webp"
+            cardimagealt="Ung kvinde"
+            overskrift="Sofia, 24 år"
+            underoverskrift="Himmelev, Roskilde"
+            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
+          />
+          <Anmeldelse
+            url="#"
+            cardimage="anmeldelse_2.webp"
+            cardimagealt="Ung kvinde"
+            overskrift="Marie, 20 år"
+            underoverskrift="Nørrebro, København"
+            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
+          />
+          <Anmeldelse
+            url="#"
+            cardimage="anmeldelse_3.webp"
+            cardimagealt="Ung mand"
+            overskrift="Jonas, 27 år"
+            underoverskrift="Vesterbro, København"
+            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
+          />
+        </div>
+      </div>
     </section>
     <section class="space-y-l max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <h2 class="font-display text-h2_m font-bold text-brown-800">Følg os</h2>

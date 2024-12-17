@@ -2,7 +2,7 @@
 const { url = "#", overskrift = "", underoverskrift = "", anmeldelse = "", cardimage = "", cardimagealt = "" } = Astro.props;
 ---
 
-<article class="card bg-neutrals-50 rounded-border-radius-43 max-w-[327px] flex flex-col @container lg:max-w-[367px]">
+<article class="card bg-neutrals-50 rounded-border-radius-43 flex flex-col @container">
   <img src={cardimage} alt={cardimagealt} />
   <!-- <Image src={anmeldelse_1} alt="" /> -->
   <section class="space-y-s p-xl">
