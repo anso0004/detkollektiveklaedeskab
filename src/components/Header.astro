@@ -1,5 +1,5 @@
 ---
-import Link from "../components/Link.astro";
+import Linket from "../components/Linket.astro";
 ---
 
 <div x-data="{ showmenu: false }" class="p-4 lg:static w-full bg-slate-200 cursor cursor-blue_yellow_cursor">
@@ -7,11 +7,11 @@ import Link from "../components/Link.astro";
     <div id="logo" class="flex flex-row lg:justify-center">
       <nav id="desktopmenu" class="hidden lg:flex">
         <ul class="flex flex-row gap-ml">
-          <li class=""><Link variant="header_primary" hover="hoverheaderbrown" href="/koncept">Koncept</Link></li>
-          <li class=""><Link variant="header_primary" hover="hoverheaderbrown" href="/abonnement">Abonnement</Link></li>
+          <li class=""><Linket variant="header_primary" hover="hoverheaderbrown" href="/koncept">Koncept</Linket></li>
+          <li class=""><Linket variant="header_primary" hover="hoverheaderbrown" href="/abonnement">Abonnement</Linket></li>
           <a href="/"><img src="/logo_dark.svg" alt="Logo" class="max-w-32 hidden lg:block" /> </a>
-          <li class=""><Link variant="header_primary" hover="hoverheaderbrown" href="/om">Om os</Link></li>
-          <li class=""><Link variant="header_primary" hover="hoverheaderbrown" href="/kontakt">Kontakt</Link></li>
+          <li class=""><Linket variant="header_primary" hover="hoverheaderbrown" href="/om">Om os</Linket></li>
+          <li class=""><Linket variant="header_primary" hover="hoverheaderbrown" href="/kontakt">Kontakt</Linket></li>
         </ul>
       </nav>
     </div>
@@ -25,10 +25,10 @@ import Link from "../components/Link.astro";
       </div>
       <nav id="mobilmenu" class="flex flex-col content-center pt-4 gap-ml bg-yellow-500 w-screen h-screen" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
         <ul>
-          <li class="text-center py-2 border-y-2"><Link variant="header_primary" hover="hoverheaderbrown" href="/koncept">Koncept</Link></li>
-          <li class="text-center py-2 border-b-2"><Link variant="header_primary" hover="hoverheaderbrown" href="/abonnement">Abonnement</Link></li>
-          <li class="text-center py-2 border-b-2"><Link variant="header_primary" hover="hoverheaderbrown" href="/om">Om os</Link></li>
-          <li class="text-center py-2 border-b-2"><Link variant="header_primary" hover="hoverheaderbrown" href="/kontakt">Kontakt</Link></li>
+          <li class="text-center py-2 border-y-2"><Linket variant="header_primary" hover="hoverheaderbrown" href="/koncept">Koncept</Linket></li>
+          <li class="text-center py-2 border-b-2"><Linket variant="header_primary" hover="hoverheaderbrown" href="/abonnement">Abonnement</Linket></li>
+          <li class="text-center py-2 border-b-2"><Linket variant="header_primary" hover="hoverheaderbrown" href="/om">Om os</Linket></li>
+          <li class="text-center py-2 border-b-2"><Linket variant="header_primary" hover="hoverheaderbrown" href="/kontakt">Kontakt</Linket></li>
         </ul>
       </nav>
     </div>

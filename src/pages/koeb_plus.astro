@@ -1,19 +1,21 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Forms from "../components/forms.astro";
-import Link from "../components/Link.astro";
 import Card_forms from "../components/card_forms.astro";
 import { Image } from "astro:assets";
 import line from "../assets/images/line.svg";
 import line_mobile from "../assets/images/linemobil.svg";
 import linemd from "../assets/images/linemd.svg";
+import Linket from "../components/Linket.astro";
 ---
 
 <MainLayout title="Køb">
   <article class="cursor cursor-blue_yellow_cursor">
     <section class="max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <div class="flex flex-cols mb-l md:mb-3xl justify-center">
-        <Link variant="progres" hover="hover" href="/koeb_plus">1</Link>
+        <div class="md:max-w-60">
+          <Linket href="/koeb_plus" variant="progres" hover="hover">1</Linket>
+        </div>
         <Image class="hidden lg:flex" src={line} alt="Gruppebillede" />
         <Image class="hidden md:flex lg:hidden" src={linemd} alt="Gruppebillede" />
         <Image class="lg:hidden md:hidden" src={line_mobile} alt="Gruppebillede" />

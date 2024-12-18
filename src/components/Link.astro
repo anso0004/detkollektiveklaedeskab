@@ -7,7 +7,8 @@ import { Image } from "astro:assets";
 const buttonStyling = "";
 
 const variantClasses = {
-  primary: "bg-red-500 font-sans text-neutrals-950 lg:px-l px-m py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold ",
+  // primary: "bg-red-500 font-sans text-neutrals-950 lg:px-l px-m py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold ",
+  primary: "bg-red-500 font-sans text-neutrals-950 w-full  py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold ",
   // primary: "bg-red-500 font-sans text-neutrals-950 text-p text-button_m font-bold lg:text-button_d ",
   secondary: "bg-yellow-500 font-sans text-neutrals-950 px-l py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold",
   header_primary: "text-h2_m font-display font-bold text-brown-800 lg:text-h6_d lg:font-sans",
@@ -19,10 +20,10 @@ const variantClasses = {
 };
 // I cards bruges nothover
 const hoverClasses = {
-  hover: "flex hover:scale-105 transition-transform cursor-pointer",
+  hover: "flex w-full hover:scale-105 transition-transform cursor-pointer",
   hoverheaderbrown: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-brown-800 transition-transform cursor-pointer",
   hoverheaderyellow: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-yellow-500 transition-transform cursor-pointer",
-  nothover: "flex",
+  nothover: "flex w-full",
   footerhover: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-yellow-500 transition-transform cursor-pointer",
   parapraphhover: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-neutrals-50 transition-transform cursor-pointer",
 };
@@ -34,7 +35,7 @@ const leftClasses = {
 
 const rightClasses = {
   yellow_r: "bg-yellow_r w-7",
-  red_r: "bg-red_r w-7  cursor cursor-blue_yellow_cursor",
+  red_r: "bg-red_r w-9 lg:w-8 cursor cursor-blue_yellow_cursor",
 };
 
 // const cursorClasses = {
@@ -53,7 +54,7 @@ const rightClasses = {
   </div>
 </div> -->
 <a href={href} target={target}>
-  <div class="flex">
+  <div class="flex w-full">
     <div class:list={[hoverClasses[hover]]}>
       <div class:list={[leftClasses[left]]} class=""></div>
       <button class:list={[buttonStyling, variantClasses[variant]]}>

@@ -25,12 +25,14 @@ const hoverClasses = {
 };
 ---
 
-<div class="flex">
-  <div class:list={[hoverClasses[hover]]}>
-    <img src={cardimage_r} alt={cardimagealt} />
-    <button class:list={[buttonStyling, variantClasses[variant]]}>
-      <slot />
-    </button>
-    <img src={cardimage_l} alt={cardimagealt} />
+<a href={href} target={target}>
+  <div class="flex w-full">
+    <div class:list={[hoverClasses[hover]]}>
+      <img src={cardimage_r} alt={cardimagealt} />
+      <button class:list={[buttonStyling, variantClasses[variant]]}>
+        <slot />
+      </button>
+      <img src={cardimage_l} alt={cardimagealt} />
+    </div>
   </div>
-</div>
+</a>

@@ -5,7 +5,6 @@ import Anmeldelse from "../components/card_anmeldelse.astro";
 import SoMe_large from "../components/some_large.astro";
 import SoMe_small from "../components/some_small.astro";
 import Goersom from "../components/goersom.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import figure_blue from "../assets/images/section_1.svg";
 import large1 from "../assets/images/large_1.webp";
@@ -14,6 +13,7 @@ import hero_blue from "../assets/images/figure_blue.svg";
 import hero_brown from "../assets/images/figure_brown.svg";
 import hero_image from "../assets/images/figure_1.webp";
 import arrow from "../assets/images/icon_arrow.svg";
+import Linket from "../components/Linket.astro";
 ---
 
 <MainLayout title="Forside">
@@ -83,8 +83,14 @@ import arrow from "../assets/images/icon_arrow.svg";
     <section class="my-13xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <h1 class="text-h1_m md:text-h2_d lg:text-h1_d font-display text-brown-800 text-center mb-2xl md:mb-5xl">Byt dit tøj <br /> Forny din stil</h1>
       <div class="md:flex md:flex-row md:justify-center md:gap-10xl grid justify-items-center gap-m">
-        <Link left="red_l" right="red_r" hover="hover" variant="primary">Sådan gør du</Link>
-        <Link left="red_l" right="red_r" hover="hover" variant="primary">Bliv frivillig</Link>
+        <!-- <Link left="red_l" right="red_r" hover="hover" variant="primary">Sådan gør du</Link>
+        <Link left="red_l" right="red_r" hover="hover" variant="primary">Bliv frivillig</Link> -->
+        <div class="md:max-w-60">
+          <Linket href="/koncept" cardimage_r="red_l.svg" cardimage_l="red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Sådan gør du</Linket>
+        </div>
+        <div class="md:max-w-60">
+          <Linket href="#" cardimage_r="red_l.svg" cardimage_l="red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Bliv frivillig</Linket>
+        </div>
       </div>
     </section>
     <section class="">
@@ -113,8 +119,11 @@ import arrow from "../assets/images/icon_arrow.svg";
 
     <section class="my-8xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <Goersom />
-      <div class="mt-2xl">
+      <!-- <div class="mt-2xl">
         <Link left="red_l" right="red_r" hover="hover" variant="primary">Find butik</Link>
+      </div> -->
+      <div class="mt-2xl md:max-w-60">
+        <Linket href="/kontakt" cardimage_r="red_l.svg" cardimage_l="red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Se butikker</Linket>
       </div>
     </section>
     <section class="">
@@ -126,30 +135,9 @@ import arrow from "../assets/images/icon_arrow.svg";
       <div class="mt-[-1800px] md:mt-[-1800px] lg:mt-[-630px] xl:mt-[-580px] 2xl:mt-[-600px] max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
         <h2 class="text-h2_m font-display font-bold text-neutrals-50 md:text-h2_d text-center mb-xl">Vi deler klædeskab</h2>
         <div class="z-50 relative grid gap-2xl lg:grid-cols-3">
-          <Anmeldelse
-            url="#"
-            cardimage="anmeldelse_1.webp"
-            cardimagealt="Ung kvinde"
-            overskrift="Sofia, 24 år"
-            underoverskrift="Himmelev, Roskilde"
-            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
-          />
-          <Anmeldelse
-            url="#"
-            cardimage="anmeldelse_2.webp"
-            cardimagealt="Ung kvinde"
-            overskrift="Marie, 20 år"
-            underoverskrift="Nørrebro, København"
-            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
-          />
-          <Anmeldelse
-            url="#"
-            cardimage="anmeldelse_3.webp"
-            cardimagealt="Ung mand"
-            overskrift="Jonas, 27 år"
-            underoverskrift="Vesterbro, København"
-            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
-          />
+          <Anmeldelse url="#" cardimage="anmeldelse_1.webp" cardimagealt="Ung kvinde" overskrift="Sofia, 24 år" underoverskrift="Himmelev, Roskilde" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
+          <Anmeldelse url="#" cardimage="anmeldelse_2.webp" cardimagealt="Ung kvinde" overskrift="Marie, 20 år" underoverskrift="Nørrebro, København" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
+          <Anmeldelse url="#" cardimage="anmeldelse_3.webp" cardimagealt="Ung mand" overskrift="Jonas, 27 år" underoverskrift="Vesterbro, København" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
         </div>
       </div>
     </section>

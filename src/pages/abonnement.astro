@@ -1,9 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Abonnements from "../components/card_abonnement.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import figure_blue from "../assets/images/section_1.svg";
+import Linket from "../components/Linket.astro";
 ---
 
 <MainLayout title="Abbonement">
@@ -17,10 +17,10 @@ import figure_blue from "../assets/images/section_1.svg";
       </div>
       <div class="mt-[-1200px] md:mt-[-620px] lg:mt-[-700px] xl:mt-[-750px] 2xl:mt-[-810px] max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto grid grid-cols-12 space-y-l md:space-y-0 md:gap-l">
         <div class="z-50 col-start-1 col-span-12 md:col-start-1 md:col-span-6 lg:col-start-2 lg:col-span-5 xl:col-start-3 xl:col-span-4">
-          <Abonnements url="#" badge="false" type="Basis" pris="199" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="cross_red.svg" iconalt4="Rødt kryds-ikon" icon5="cross_red.svg" iconalt5="Rødt kryds-ikon" />
+          <Abonnements url="/koeb_basis1" badge="false" type="Basis" pris="199" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="cross_red.svg" iconalt4="Rødt kryds-ikon" icon5="cross_red.svg" iconalt5="Rødt kryds-ikon" />
         </div>
         <div class="z-50 col-start-1 col-span-12 md:col-start-7 md:col-span-6 lg:col-start-7 lg:col-span-5 xl:col-start-7 xl:col-span-4">
-          <Abonnements url="#" badge="true" type="Plus" pris="299" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="check_black.svg" iconalt4="Sort check-ikon" icon5="check_black.svg" iconalt5="Sort check-ikon" />
+          <Abonnements url="/koeb_plus" badge="true" type="Plus" pris="299" icon1="check_black.svg" iconalt1="Sort check-ikon" icon2="check_black.svg" iconalt2="Sort check-ikon" icon3="check_black.svg" iconalt3="Sort check-ikon" icon4="check_black.svg" iconalt4="Sort check-ikon" icon5="check_black.svg" iconalt5="Sort check-ikon" />
         </div>
       </div>
     </section>
@@ -28,7 +28,10 @@ import figure_blue from "../assets/images/section_1.svg";
       <div class="space-y-m max-w-[44rem] mt-14xl">
         <h2 class="text-h2_m font-display text-brown-800 font-bold lg:text-h2_d">Om konceptet</h2>
         <p class="text-p font-sans text-neutrals-950 font-regular pb-ml">Hos Det Kollektive Klædeskab skaber vi et cirkulært klædeskab, hvor tøj får nyt liv. Dit skab er fyldt med skatte, som fortjener at blive brugt og elsket igen. Vi bytter tøj med hinanden og lader det fortsætte sin rejse.</p>
-        <Link left="red_l" right="red_r" hover="hover" variant="primary">Sådan gør du</Link>
+        <!-- <Link left="red_l" right="red_r" hover="hover" variant="primary">Sådan gør du</Link> -->
+        <div class="md:max-w-60">
+          <Linket href="/koncept" cardimage_r="red_l.svg" cardimage_l="red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Se abonnementer</Linket>
+        </div>
       </div>
       <div class="space-y-m max-w-[44rem]">
         <h2 class="text-h2_m font-display text-brown-800 font-bold lg:text-h2_d">Hvilket abonnement skal du vælge?</h2>
