@@ -3,8 +3,8 @@ const { url = "#", badge = "false", type = "", pris = "", icon1 = "", iconalt1 =
 import Linket from "../components/Linket.astro";
 ---
 
-<article class="card bg-neutrals-50 rounded-border-radius-43 @container hover:scale-105 transition-transform cursor-pointer">
-  <a href={url} class="flex flex-col">
+<article class="card bg-neutrals-50 rounded-border-radius-43 @container hover:scale-105 transition-transform cursor cursor-blue_yellow_cursor">
+  <a href={url} class="flex flex-col cursor cursor-blue_yellow_cursor">
     <div class="relative">
       {badge === "true" && <div class="badge absolute rounded-border-radius-full text-button_m font-sans font-bold bg-yellow-700 px-ml py-xxs top-ml right-ml lg:text-button_d z-40">Populær</div>}
     </div>

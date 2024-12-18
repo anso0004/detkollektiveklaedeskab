@@ -1,5 +1,5 @@
 ---
-const { variant = "primary", hover = "hover", left = "red", right = "", href = "", target = "", cursor = "blue", cardimage_l = "", cardimagealt = "", cardimage_r = "" } = Astro.props;
+const { variant = "primary", hover = "hover", left = "red", right = "", href = "", target = "", cursor = "", cardimage_l = "", cardimagealt = "", cardimage_r = "" } = Astro.props;
 import { Image } from "astro:assets";
 
 const buttonStyling = "";
@@ -16,12 +16,17 @@ const variantClasses = {
 };
 // I cards bruges nothover
 const hoverClasses = {
-  hover: "flex w-full hover:scale-105 transition-transform cursor-pointer",
-  hoverheaderbrown: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-brown-800 transition-transform cursor-pointer",
-  hoverheaderyellow: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-yellow-500 transition-transform cursor-pointer",
+  hover: "flex w-full hover:scale-105 transition-transform ",
+  hoverheaderbrown: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-brown-800 transition-transform ",
+  hoverheaderyellow: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-yellow-500 transition-transform ",
   nothover: "flex w-full",
-  footerhover: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-yellow-500 transition-transform cursor-pointer",
-  parapraphhover: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-neutrals-50 transition-transform cursor-pointer",
+  footerhover: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-yellow-500 transition-transform ",
+  parapraphhover: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-neutrals-50 transition-transform ",
+};
+
+const cursorClasses = {
+  blue: "cursor cursor-blue_yellow_cursor",
+  yellow: "cursor cursor-yellow_blue_cursor",
 };
 ---
 
