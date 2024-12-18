@@ -152,6 +152,10 @@ export default {
         bold: "700",
         ekstrabold: "800",
       },
+      cursor: {
+        yellow_blue_cursor: "url(/y.svg) 25 25, pointer",
+        blue_yellow_cursor: "url(/b.svg) 25 25, pointer",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
