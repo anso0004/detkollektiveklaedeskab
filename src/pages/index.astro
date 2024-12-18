@@ -9,10 +9,77 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import figure_blue from "../assets/images/section_1.svg";
 import large1 from "../assets/images/large_1.webp";
+import hero_bg from "../assets/images/hero_bg.png";
+import hero_blue from "../assets/images/figure_blue.svg";
+import hero_brown from "../assets/images/figure_brown.svg";
+import hero_image from "../assets/images/figure_1.webp";
+import arrow from "../assets/images/icon_arrow.svg";
 ---
 
 <MainLayout title="Forside">
   <article class="">
+    <!-- <section>
+      <div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('/hero_bg.png')">
+        <div class="relative parallaxgrafik"></div>
+        <div class="grid grid-cols-12">
+          <Image class="absolute top-[-1000px] col-start-2 parallaxgrafik1" src={hero_blue} alt="Blå figur" />
+          <Image class="absolute top-[-1000px] col-start-4 parallaxgrafik2" src={hero_brown} alt="Brun figur" />
+          <Image class="absolute top-[-1000px] col-start-8 parallaxgrafik3" src={hero_image} alt="Brun figur" />
+        </div>
+        <div class="h-[50vh]"></div>
+      </div>
+    </section> -->
+
+    <!-- Hero med stickyscroll -->
+    <article>
+      <div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('/hero_bg.png')"></div>
+      <div class="relative">
+        <div class="">
+          <Image class="" src={hero_blue} alt="Blå figur" />
+          <Image class="" src={hero_brown} alt="Brun figur" />
+          <Image class="" src={hero_image} alt="Brun figur" />
+        </div>
+      </div>
+      <div class="h-[100vh]"></div>
+    </article>
+
+    <!-- Hero med parallaxscroll -->
+    <section class="parallaxgrafik fullwidthsection">
+      <div class="top-0 left-0 right-0 bottom-0 grid grid-cols-12 grid-rows-6 bg-teal-100 mt-8 h-screen w-full bg-cover bg-center overflow-hidden" style="background-image: url('/hero_bg.png');">
+        <div class="relative">
+          <Image src={hero_blue} alt="" class="col-start-2 parallaxgrafik1" />
+          <Image src={hero_brown} alt="" class="col-start-5 parallaxgrafik2" />
+          <Image src={hero_image} alt="" class="col-start-3 col-span-2 parallaxgrafik3" />
+        </div>
+      </div>
+    </section>
+
+    <!-- HHHHERRRRR Hero med stickyscroll og parallaxscroll -->
+    <div class="parallaxgrafik fullwidthsection">
+      <div class="top-0 left-0 right-0 bottom-0 grid grid-cols-12 grid-rows-6 bg-teal-100 mt-8 h-screen w-full bg-cover bg-center overflow-hidden" style="background-image: url('/hero_bg.png');">
+        <div></div>
+        <div class="relative">
+          <Image src={hero_blue} alt="" class="col-start-2 parallaxgrafik1" />
+          <Image src={hero_brown} alt="" class="col-start-5 parallaxgrafik2" />
+          <Image src={hero_image} alt="" class="col-start-3 col-span-2 parallaxgrafik3" />
+        </div>
+      </div>
+      <!-- <div class="h-[100vh]"></div> -->
+    </div>
+
+    <!-- In view -->
+    <div class="relative top-0 left-0 right-0 bottom-0 mt-8 h-screen w-full bg-cover bg-center overflow-hidden" style="background-image: url('/hero_bg.png');">
+      <Image class="absolute fotoinview1" src={hero_blue} alt="Blå figur" />
+      <Image class="absolute right-0 fotoinview2" src={hero_brown} alt="Brun figur" />
+      <Image class="absolute fotoinview3" src={hero_image} alt="Brun figur" />
+      <div class="absolute bottom-4 left-[45%] place-items-center">
+        <div class="flex">
+          <Image class="" src={arrow} alt="Ikon pil" />
+          <h6 class="text-h6_m font-sans text-brown-800 font-bold md:text-h6_d">Scoll ned</h6>
+        </div>
+      </div>
+    </div>
+
     <section class="my-13xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <h1 class="text-h1_m md:text-h2_d lg:text-h1_d font-display text-brown-800 text-center mb-2xl md:mb-5xl">Byt dit tøj <br /> Forny din stil</h1>
       <div class="md:flex md:flex-row md:justify-center md:gap-10xl grid justify-items-center gap-m">
@@ -111,3 +178,35 @@ import large1 from "../assets/images/large_1.webp";
     </section>
   </article></MainLayout
 >
+
+<script>
+  import { animate, scroll, inView } from "motion";
+
+  /* inView animatio 1n */
+  inView(".fotoinview1", () => {
+    animate(".fotoinview1", { x: [0, -450] }, { duration: 4 });
+  });
+
+  /* inView animatio 2n */
+  inView(".fotoinview2", () => {
+    animate(".fotoinview2", { x: [300, -500] }, { duration: 3 });
+  });
+
+  /* inView animatio 3n */
+  inView(".fotoinview3", () => {
+    animate(".fotoinview3", { x: [700, 1250] }, { duration: 3 });
+  });
+
+  scroll(animate(".parallaxgrafik1", { x: [400, -400] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik2", { x: [-100, 100] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik3", { x: [-500, 500] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+</script>
