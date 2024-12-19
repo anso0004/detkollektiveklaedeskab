@@ -16,9 +16,48 @@ import hero_image from "../assets/images/figure_1.webp";
 import arrow from "../assets/images/icon_arrow.svg";
 import Linket from "../components/Linket.astro";
 import Steps from "../components/5steps.astro";
+
+const schemamarkup = {
+  "@context": "https://schema.org/",
+  "@type": "HowTo",
+  name: "5 Steps til at komme i gang",
+  description: "En guide til at blive en del af Det Kollektive Klædeskab.",
+  step: [
+    {
+      "@type": "HowToStep",
+      text: "Meld dig ind i Klædeskabet",
+      image: "https://detkollektiveklaedeskab.netlify.app/skab.gif",
+      name: "1",
+    },
+    {
+      "@type": "HowToStep",
+      text: "Find det tøj du ikke længere bruger",
+      image: "https://detkollektiveklaedeskab.netlify.app/toj.gif",
+      name: "2",
+    },
+    {
+      "@type": "HowToStep",
+      text: "Aflevér tøjet i butikken",
+      image: "https://detkollektiveklaedeskab.netlify.app/kasser.gif",
+      name: "3",
+    },
+    {
+      "@type": "HowToStep",
+      text: "Modtag point for tøjet",
+      image: "https://detkollektiveklaedeskab.netlify.app/telefon.gif",
+      name: "4",
+    },
+    {
+      "@type": "HowToStep",
+      text: "Brug pointene til at handle nyt genbrugstøj",
+      image: "https://detkollektiveklaedeskab.netlify.app/tasker.gif",
+      name: "5",
+    },
+  ],
+};
 ---
 
-<SecondaryLayout title="Det Kollektive Klædeskab">
+<SecondaryLayout title="Det Kollektive Klædeskab" description="" ogtitle="" ogdescription="">
   <!-- Hero på mobile -->
   <article class="lg:hidden md:grid md:grid-cols-2">
     <div class="max-w-[20.375rem] md:max-w-[43rem] mx-auto flex flex-col gap-m ml-7">
@@ -111,9 +150,30 @@ import Steps from "../components/5steps.astro";
       <div class="mt-[-1800px] md:mt-[-1800px] lg:mt-[-630px] xl:mt-[-580px] 2xl:mt-[-600px] max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
         <h2 class="text-h2_m font-display font-bold text-neutrals-50 md:text-h2_d text-center mb-xl">Vi deler klædeskab</h2>
         <div class="z-50 relative grid gap-2xl lg:grid-cols-3">
-          <Anmeldelse url="#" cardimage="anmeldelse_1.webp" cardimagealt="Ung kvinde" overskrift="Sofia, 24 år" underoverskrift="Himmelev, Roskilde" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
-          <Anmeldelse url="#" cardimage="anmeldelse_2.webp" cardimagealt="Ung kvinde" overskrift="Marie, 20 år" underoverskrift="Nørrebro, København" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
-          <Anmeldelse url="#" cardimage="anmeldelse_3.webp" cardimagealt="Ung mand" overskrift="Jonas, 27 år" underoverskrift="Vesterbro, København" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
+          <Anmeldelse
+            url="#"
+            cardimage="anmeldelse_1.webp"
+            cardimagealt="Ung kvinde"
+            overskrift="Sofia, 24 år"
+            underoverskrift="Himmelev, Roskilde"
+            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
+          />
+          <Anmeldelse
+            url="#"
+            cardimage="anmeldelse_2.webp"
+            cardimagealt="Ung kvinde"
+            overskrift="Marie, 20 år"
+            underoverskrift="Nørrebro, København"
+            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
+          />
+          <Anmeldelse
+            url="#"
+            cardimage="anmeldelse_3.webp"
+            cardimagealt="Ung mand"
+            overskrift="Jonas, 27 år"
+            underoverskrift="Vesterbro, København"
+            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
+          />
         </div>
       </div>
     </section>
@@ -147,8 +207,6 @@ import Steps from "../components/5steps.astro";
   import { animate, scroll, inView } from "motion";
 
   const screenwidth = window.innerWidth;
-
-  // const items = document.querySelectorAll("#horisontalliste li");
 
   if (screenwidth > 1500) {
     console.log("stor");
@@ -187,21 +245,6 @@ import Steps from "../components/5steps.astro";
       offset: ["start end", "end start"],
     });
   }
-
-  // scroll(animate(".parallaxgrafik1", { x: [-500, -1100] }), {
-  //   target: document.querySelector(".parallaxgrafik"),
-  //   offset: ["start end", "end start"],
-  // });
-  // scroll(animate(".parallaxgrafik2", { x: [800, 50] }), {
-  //   target: document.querySelector(".parallaxgrafik"),
-  //   offset: ["start end", "end start"],
-  // });
-  // scroll(animate(".parallaxgrafik3", { x: [750, 1700] }), {
-  //   target: document.querySelector(".parallaxgrafik"),
-  //   offset: ["start end", "end start"],
-  // });
-  // scroll(animate(".parallaxgrafik4", { x: [2000, 200] }), {
-  //   target: document.querySelector(".parallaxgrafik"),
-  //   offset: ["start end", "end start"],
-  // });
 </script>
+
+<script type="application/ld+json"></script>
