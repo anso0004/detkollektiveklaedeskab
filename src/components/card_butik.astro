@@ -7,7 +7,7 @@ import Linket from "../components/Linket.astro";
 <article class="card bg-neutrals-50 rounded-border-radius-43 max-w-[327px] flex flex-col @container lg:max-w-[367px] hover:scale-105 transition-transform">
   <a href="">
     <img src={cardimage} alt={cardimagealt} />
-    <section class="space-y-ml p-xl">
+    <section class="space-y-ml px-ml pt-m pb-ml 2xl:p-xl">
       <div class="space-y-sm">
         <h5 class="text-h5_m font-sans font-bold lg:text-h5_d">{overskrift}</h5>
         <div class="space-y-xxs">
@@ -16,7 +16,7 @@ import Linket from "../components/Linket.astro";
         </div>
       </div>
       <!-- <Link left="red_l" right="red_r" hover="nothover" variant="primary">Find vej</Link> -->
-      <div class="md:max-w-60">
+      <div class="">
         <Linket url="#" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Find butik</Linket>
       </div>
     </section>
