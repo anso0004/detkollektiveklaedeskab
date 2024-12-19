@@ -153,8 +153,8 @@ export default {
         ekstrabold: "800",
       },
       cursor: {
-        yellow_blue_cursor: "url(/y.svg) 25 25, pointer",
-        blue_yellow_cursor: "url(/b.svg) 25 25, pointer",
+        yellow_blue_cursor: "url(/yb.svg) 25 25, pointer",
+        blue_yellow_cursor: "url(/by.svg) 25 25, pointer",
       },
     },
   },

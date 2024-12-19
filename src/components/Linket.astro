@@ -1,12 +1,12 @@
 ---
-const { variant = "primary", hover = "hover", left = "red", right = "", href = "", target = "", cursor = "", cardimage_l = "", cardimagealt = "", cardimage_r = "" } = Astro.props;
+const { variant = "primary", hover = "hover", left = "red", right = "", href = "", target = "", cursor = "blue", cardimage_l = "", cardimagealt = "", cardimage_r = "" } = Astro.props;
 import { Image } from "astro:assets";
 
 const buttonStyling = "";
 
 const variantClasses = {
-  primary: "bg-red-500 font-sans text-neutrals-950 w-full  py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold ",
-  secondary: "bg-yellow-500 font-sans text-neutrals-950 px-l py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold",
+  primary: "bg-red-500 font-sans text-neutrals-950 w-full  py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold md:px-sm ",
+  secondary: "bg-yellow-500 font-sans text-neutrals-950 px-l py-sm text-p text-button_m font-bold lg:text-button_d lg:font-bold md:px-sm",
   header_primary: "text-h2_m font-display font-bold text-brown-800 lg:text-h6_d lg:font-sans",
   header_secondary: "text-h2_m font-display font-bold text-yellow-500 lg:text-h6_d lg:font-sans",
   footerlinks: "text-p text-yellow-500 font-sans",
@@ -31,10 +31,10 @@ const cursorClasses = {
 ---
 
 <a href={href} target={target}>
-  <div class="flex w-full">
-    <div class:list={[hoverClasses[hover]]}>
+  <div class="flex w-full cursor cursor-blue_yellow_cursor">
+    <div class:list={[hoverClasses[hover], cursorClasses[cursor]]}>
       <img src={cardimage_r} alt={cardimagealt} />
-      <button class:list={[buttonStyling, variantClasses[variant]]}>
+      <button class:list={[buttonStyling, variantClasses[variant], cursorClasses[cursor]]}>
         <slot />
       </button>
       <img src={cardimage_l} alt={cardimagealt} />

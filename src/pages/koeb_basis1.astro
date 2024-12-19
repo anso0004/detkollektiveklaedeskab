@@ -1,17 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Linket from "../components/Linket.astro";
 import { Image } from "astro:assets";
 import line from "../assets/images/line.svg";
 import line_mobile from "../assets/images/linemobil.svg";
 import linemd from "../assets/images/linemd.svg";
-import Linket from "../components/Linket.astro";
 ---
 
 <MainLayout title="Køb">
   <article class="cursor cursor-blue_yellow_cursor">
     <section class="max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto mb-13xl">
       <div class="flex flex-cols mb-l md:mb-3xl">
-        <!-- <Link variant="progres" hover="hover" href="/koeb_basis1">1</Link> -->
         <div class="md:max-w-60">
           <Linket href="/koeb_basis1" variant="progres" hover="hover">1</Linket>
         </div>
@@ -52,7 +51,6 @@ import Linket from "../components/Linket.astro";
           Vesterbro<span class="nowrap"><img x-show="selected === 'vesterbro'" src="/check_darkgreen.svg" alt="Checkmark ikon" class="h-6 w-6 ml-2" /></span>
         </p>
       </section>
-      <!-- <Link variant="primary" left="red_l" right="red_r" hover="hover" href="/koeb_basis2">Næste</Link> -->
       <div class="md:max-w-60">
         <Linket href="/koeb_basis2" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Næste</Linket>
       </div>

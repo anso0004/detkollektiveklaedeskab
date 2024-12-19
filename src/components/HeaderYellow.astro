@@ -18,7 +18,6 @@ import Linket from "../components/Linket.astro";
     <div class="p-5 z-50 bg-yellow-500">
       <div class="flex justify-between">
         <a href="#index"><img src="/logo_dark.svg" alt="Logo" class="max-w-32 lg:hidden" /> </a>
-        <!-- <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"><img src="/burger.svg" alt="Logo" /> </button> -->
         <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu">
           <img :src="showmenu ? '/cross_black.svg' : '/burger.svg'" alt="Menu" />
         </button>
