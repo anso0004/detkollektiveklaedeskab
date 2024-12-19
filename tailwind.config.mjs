@@ -130,7 +130,7 @@ export default {
       /* Tilføj dit typografiske hierarki herunder */
       fontSize: {
         base: ["1rem", { lineHeight: "1.5rem" }],
-        p: ["1rem", { lineHeight: "1.25rem" }],
+        p: ["1rem", { lineHeight: "1.5rem" }],
         h1_d: ["5.062rem", { lineHeight: "6.25rem" }],
         h2_d: ["3.375rem", { lineHeight: "4.188rem" }],
         h3_d: ["2.250rem", { lineHeight: "2.75rem" }],
