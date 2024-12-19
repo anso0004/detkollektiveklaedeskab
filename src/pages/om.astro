@@ -6,12 +6,46 @@ import diagram from "../assets/images/diagram.svg";
 import pokal from "../assets/images/pokal.svg";
 import section_blue from "../assets/images/section_1.svg";
 import Linket from "../components/Linket.astro";
+import hero_blue from "../assets/images/figure_blue.svg";
+import hero_brown from "../assets/images/figure_brown.svg";
+import hero_image from "../assets/images/figure_1.webp";
 ---
 
 <MainLayout title="Om os">
   <article class="cursor cursor-blue_yellow_cursor">
-    <section class="pb-16xl md:pb-11xl lg:grid lg:grid-cols-2 gap-10 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-      <div>
+    <article class="cursor cursor-blue_yellow_cursor">
+      <section class="md:grid md:grid-cols-2 gap-6 ml-12xl">
+        <div class="">
+          <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 pb-l md:pb-3xl">Om os</h1>
+          <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pb-m md:pb-s">Siden 2014</h3>
+          <div class="space-y-sm">
+            <p class="text-p font-sans">Det Kollektive Klædeskab opstod som en forretningsidé, der skulle gøre op med den forurenende tøjindustri. Grundlæggeren Louise tænte, at hvis man skabte et abonnement, der kunne ændre vores tøjvaner, så man i stedet for at købe nyt kunne dele et fælles klædeskab.</p>
+            <p class="text-p font-sans">Der gik mange år, hvor konceptet blev afprøvet, men det var svært at få kunderne med på en dele-idé. Det endte med, at én af butikkerne blev solgt til Lene, som i dag er CEO og butiksejer i København og Roskilde.</p>
+            <p class="text-p font-sans">Lene fik spark i de sociale medier, især Instagram, hvor følgerantallet på en kort periode steg drastisk. I dag består Det Kollektive Klædeskab af fire butikker med tre fulstidsansatte og et team af frivillige, der er med til at drive forretningen mod en bæredygtigere verden.</p>
+          </div>
+          <div class="py-2xl md:max-w-60">
+            <!-- <Link left="red_l" right="red_r" hover="hover" variant="primary">Se abonnementer</Link> -->
+            <Linket href="/abonnement" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Se abonnementer</Linket>
+          </div>
+        </div>
+        <div>
+          <!-- <Image class="" src={figure1} alt="Figur med pige" /> -->
+          <div class="parallaxgrafik">
+            <div class="top-0 left-0 right-0 bottom-0 mt-8 h-screen w-full bg-cover bg-center overflow-hidden">
+              <div></div>
+              <div class="relative">
+                <Image src={hero_brown} alt="" class="absolute top-14 w-5/6 parallaxgrafik1" />
+                <Image src={hero_image} alt="" class="absolute top-6 w-4/6 parallaxgrafik2" />
+                <Image src={hero_blue} alt="" class="absolute top-72 w-2/6 parallaxgrafik3" />
+              </div>
+            </div>
+            <!-- <div class="h-[100vh]"></div> -->
+          </div>
+        </div>
+      </section>
+    </article>
+    <!-- <section class="lg:grid lg:grid-cols-2 gap-10 ml-12xl">
+      <div class="">
         <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 pb-l md:pb-3xl">Om os</h1>
         <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pb-m md:pb-s">Siden 2014</h3>
         <div class="space-y-sm">
@@ -25,61 +59,100 @@ import Linket from "../components/Linket.astro";
           </div>
         </div>
       </div>
+      <div>
+        <div class="parallaxgrafik">
+          <div class="top-0 left-0 right-0 bottom-0 mt-8 h-screen w-full bg-cover bg-center overflow-hidden">
+            <div></div>
+            <div class="relative">
+              <Image src={hero_brown} alt="" class="absolute top-14 w-5/6 parallaxgrafik" />
+              <Image src={hero_image} alt="" class="absolute top-6 w-4/6 parallaxgrafik" />
+              <Image src={hero_blue} alt="" class="absolute top-72 w-2/6 parallaxgrafik" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+  </article>
+
+  <section class="cursor cursor-yellow_blue_cursor">
+    <div class="z-30">
+      <Image class="flip_horisontal w-full -mb-1" src={section_blue} alt="Blå bue" />
+      <div class="bg-blue-500 h-[600px] md:h-[528px]"></div>
+      <Image class="flip_horisontal flip_vertikal w-full -mt-1" src={section_blue} alt="Blå bue" />
+    </div>
+    <div class="mt-[-800px] md:mt-[-550px] lg:mt-[-600px] xl:mt-[-680px] 2xl:mt-[-750px] grid gap-m md:gap-9xl md:grid-cols-5 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+      <Image class="z-50 md:col-span-2" src={pokal} alt="Pokal" />
+      <div class="z-50 space-y-m md:col-span-3 md:content-center">
+        <h2 class="text-h2_m md:text-h2_d font-display text-neutrals-50 fitty">Tøj er den mest <br /> populære <br /> genbrugsvare</h2>
+        <p class="text-p font-sans text-neutrals-50 max-w-[400px] pb-m">I de sidste 12 måneder har 44% af danskerne købt genbrugstøj. Den næsthøjeste kategori er boligtilbehør på 27%.</p>
+        <Linket variant="paragraphlinks2" hover="parapraphhover" href="https://guide.dba.dk/publikationer/genbrugsindekset/2024/">Kilde: guide.dba.dk</Linket>
+      </div>
+    </div>
+    <section class="cursor cursor-blue_yellow_cursor pt-16xl pb-5xl md:pt-20xl md:pb-13xl grid lg:grid-cols-2 gap-l md:gap-9xl md:my-5xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+      <div>
+        <h3 class="text-h3_m lg:text-h3_d font-display pb-m text-brown-800">Vi gør en forskel</h3>
+        <p class="text-p font-sans pb-sm">Tekstilindustrien står for op mod 10% af verdens samlede CO2-udledning. Det gør den til en af de mest forurenende industrier.</p>
+        <p class="text-p font-sans pb-sm">Som medlem af Det Kollektive Klædeskab gør du en konkret forskel for klimaet. Du bytter og deler tøj, i stedet for at købt nyt. Du bidrager til at reducere nyproduceret tøj og bekæmpe overproduktion.</p>
+        <p class="text-p font-sans">Vi ønsker at gøre mode mere bæredygtigt og tilgængeligt for alle. Vi skaber et cirkulært klædeskab, hvor det er enkelt at forny sin stil med omtanke.</p>
+      </div>
+      <div>
+        <h3 class="text-h3_m lg:text-h3_d font-display pb-m text-brown-800">Vi skaber forandring</h3>
+        <p class="text-p font-sans pb-sm">Det Kollektrive Klædeskab stræber mod at have tøj til alle forbrugere uanset alder, køn og størrelse. Vores vision er at gøre det nemt og inspirerende at finde tøj, der passer perfekt til både krop og personlighed. Det skal være et sted, hvor alle føler sig velkomne og repræsentere, uanset hvem de er.</p>
+        <p class="text-p font-sans">Vi drømmer om at skabe en ny måde at forbruge på, hvor deling og genbrug bliver normen. Sammen kan vi bygge en fremtid, hvor det muligt at udtrykke sin personlige stil og samtidigt passe på planeten.</p>
+      </div>
     </section>
+
     <section class="cursor cursor-yellow_blue_cursor">
       <div class="z-30">
         <Image class="flip_horisontal w-full -mb-1" src={section_blue} alt="Blå bue" />
-        <div class="bg-blue-500 h-[600px] md:h-[528px]"></div>
+        <div class="bg-blue-500 h-[750px] md:h-[528px] 2xl:h-[728px]"></div>
         <Image class="flip_horisontal flip_vertikal w-full -mt-1" src={section_blue} alt="Blå bue" />
       </div>
-      <div class="mt-[-800px] md:mt-[-550px] lg:mt-[-600px] xl:mt-[-680px] 2xl:mt-[-750px] grid gap-m md:gap-9xl md:grid-cols-5 max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-        <Image class="z-50 md:col-span-2" src={pokal} alt="Pokal" />
-        <div class="z-50 space-y-m md:col-span-3 md:content-center">
-          <h2 class="text-h2_m md:text-h2_d font-display text-neutrals-50 fitty">Tøj er den mest <br /> populære <br /> genbrugsvare</h2>
-          <p class="text-p font-sans text-neutrals-50 max-w-[400px] pb-m">I de sidste 12 måneder har 44% af danskerne købt genbrugstøj. Den næsthøjeste kategori er boligtilbehør på 27%.</p>
-          <Linket variant="paragraphlinks2" hover="parapraphhover" href="https://guide.dba.dk/publikationer/genbrugsindekset/2024/">Kilde: guide.dba.dk</Linket>
+      <div class="mt-[-740px] md:mt-[-480px] lg:mt-[-550px] xl:mt-[-620px] 2xl:mt-[-800px] grid md:grid-cols-5 md:gap-9xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+        <div class="space-y-m pb-m md:col-span-3 md:content-center">
+          <h2 class="text-h2_m md:text-h2_d font-display text-neutrals-50 fitty">Flere danskere <br /> køber og sælger <br /> genbrug</h2>
+          <p class="text-p font-sans text-neutrals-50 max-w-[450px]">I 2024 har 81% af danskerne enten købt og/eller solgt en eller flere genbrugsvarer. Dette har været gradvist stigende siden 2016.</p>
         </div>
+        <Image class="w-full md:col-span-2" src={diagram} alt="Diagram" />
       </div>
-      <section class="cursor cursor-blue_yellow_cursor pt-16xl pb-5xl md:pt-20xl md:pb-13xl grid lg:grid-cols-2 gap-l md:gap-9xl md:my-5xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-        <div>
-          <h3 class="text-h3_m lg:text-h3_d font-display pb-m text-brown-800">Vi gør en forskel</h3>
-          <p class="text-p font-sans pb-sm">Tekstilindustrien står for op mod 10% af verdens samlede CO2-udledning. Det gør den til en af de mest forurenende industrier.</p>
-          <p class="text-p font-sans pb-sm">Som medlem af Det Kollektive Klædeskab gør du en konkret forskel for klimaet. Du bytter og deler tøj, i stedet for at købt nyt. Du bidrager til at reducere nyproduceret tøj og bekæmpe overproduktion.</p>
-          <p class="text-p font-sans">Vi ønsker at gøre mode mere bæredygtigt og tilgængeligt for alle. Vi skaber et cirkulært klædeskab, hvor det er enkelt at forny sin stil med omtanke.</p>
-        </div>
-        <div>
-          <h3 class="text-h3_m lg:text-h3_d font-display pb-m text-brown-800">Vi skaber forandring</h3>
-          <p class="text-p font-sans pb-sm">Det Kollektrive Klædeskab stræber mod at have tøj til alle forbrugere uanset alder, køn og størrelse. Vores vision er at gøre det nemt og inspirerende at finde tøj, der passer perfekt til både krop og personlighed. Det skal være et sted, hvor alle føler sig velkomne og repræsentere, uanset hvem de er.</p>
-          <p class="text-p font-sans">Vi drømmer om at skabe en ny måde at forbruge på, hvor deling og genbrug bliver normen. Sammen kan vi bygge en fremtid, hvor det muligt at udtrykke sin personlige stil og samtidigt passe på planeten.</p>
-        </div>
-      </section>
-
-      <section class="cursor cursor-yellow_blue_cursor">
-        <div class="z-30">
-          <Image class="flip_horisontal w-full -mb-1" src={section_blue} alt="Blå bue" />
-          <div class="bg-blue-500 h-[750px] md:h-[528px] 2xl:h-[728px]"></div>
-          <Image class="flip_horisontal flip_vertikal w-full -mt-1" src={section_blue} alt="Blå bue" />
-        </div>
-        <div class="mt-[-740px] md:mt-[-480px] lg:mt-[-550px] xl:mt-[-620px] 2xl:mt-[-800px] grid md:grid-cols-5 md:gap-9xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-          <div class="space-y-m pb-m md:col-span-3 md:content-center">
-            <h2 class="text-h2_m md:text-h2_d font-display text-neutrals-50 fitty">Flere danskere <br /> køber og sælger <br /> genbrug</h2>
-            <p class="text-p font-sans text-neutrals-50 max-w-[450px]">I 2024 har 81% af danskerne enten købt og/eller solgt en eller flere genbrugsvarer. Dette har været gradvist stigende siden 2016.</p>
-          </div>
-          <Image class="w-full md:col-span-2" src={diagram} alt="Diagram" />
-        </div>
-      </section>
-      <section class="cursor cursor-blue_yellow_cursor pt-14xl pb-6xl md:pt-16xl md:pb-4xl md:my-5xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-        <Personale />
-      </section>
     </section>
-  </article>
-
-  <script>
-    import fitty from "fitty";
-    fitty(".fitty");
-    window.addEventListener("load", (event) => {
-      fitty.fitAll();
-    });
-    fitty(".fittysmall", { minSize: 18, maxSize: 54 });
-  </script>
+    <section class="cursor cursor-blue_yellow_cursor pt-14xl pb-6xl md:pt-16xl md:pb-4xl md:my-5xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+      <Personale />
+    </section>
+  </section>
 </MainLayout>
+
+<script>
+  import fitty from "fitty";
+  fitty(".fitty");
+  window.addEventListener("load", (event) => {
+    fitty.fitAll();
+  });
+  fitty(".fittysmall", { minSize: 18, maxSize: 81 });
+
+  /* Import af Motion One biblioteket */
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+
+  // scroll(
+  //   animate(".scrollzoomimg", {
+  //     scale: [1, 1.1],
+  //   }),
+  //   {
+  //     target: document.querySelector(".scrollzoom"),
+  //     offset: ["0.75 end", "end end"],
+  //   }
+  // );
+
+  scroll(animate(".parallaxgrafik1", { x: [300, 100] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik2", { x: [300, -200] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik3", { x: [300, 500] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+</script>

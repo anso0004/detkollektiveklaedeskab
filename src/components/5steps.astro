@@ -145,12 +145,26 @@ import skab from "../assets/images/skab.svg";
     /* Import af Motion One biblioteket */
     import { animate, stagger, inView, scroll, timeline } from "motion";
 
+    const screenwidth = window.innerWidth;
+
     const items = document.querySelectorAll("#horisontalliste li");
-    scroll(
-      animate("#horisontalliste", {
-        transform: ["none", `translateX(-${items.length - 2}00vw)`],
-      }),
-      { target: document.querySelector("#horisontalscrollsection") }
-    );
+
+    if (screenwidth > 1200) {
+      console.log("stor");
+      scroll(
+        animate("#horisontalliste", {
+          transform: ["none", `translateX(-${items.length - 1}00vw)`],
+        }),
+        { target: document.querySelector("#horisontalscrollsection") }
+      );
+    } else {
+      console.log(screenwidth);
+      scroll(
+        animate("#horisontalliste", {
+          transform: ["none", `translateX(-${items.length - 5}00vw)`],
+        }),
+        { target: document.querySelector("#horisontalscrollsection") }
+      );
+    }
   </script>
 </section>
