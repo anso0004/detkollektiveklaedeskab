@@ -4,6 +4,7 @@ import Butik from "../components/card_butik.astro";
 import Personale from "../components/Personale.astro";
 import { Image } from "astro:assets";
 import figure_blue from "../assets/images/section_1.svg";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Kontakt">
@@ -14,25 +15,25 @@ import figure_blue from "../assets/images/section_1.svg";
           <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 pb-l md:pb-3xl">Kontakt</h1>
           <div class="md:grid md:grid-cols-2 gap-14xl">
             <div id="abningstider">
-              <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pb-m">Åbningstider:</h3>
+              <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pb-m">Åbningstider</h3>
               <div class="flex gap-l">
                 <div>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Mandag</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Tirsdag</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Onsdag</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Torsdag</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Fredag</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Lørdag</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Søndag</h5>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">Mandag</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">Tirsdag</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">Onsdag</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">Torsdag</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">Fredag</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">Lørdag</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">Søndag</h6>
                 </div>
                 <div>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Lukket</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">10-18</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">15-21</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">10-18</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">10-18</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">15-18</h5>
-                  <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutrals-950 md:pb-s">Lukket</h5>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">Lukket</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">10-18</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">15-21</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">10-18</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">10-18</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">15-18</h6>
+                  <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutrals-950 md:pb-xxs">Lukket</h6>
                 </div>
               </div>
               <div class="md:pt-m">
@@ -44,16 +45,28 @@ import figure_blue from "../assets/images/section_1.svg";
             </div>
             <div>
               <div>
-                <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pt-l pb-m md:pb-s md:pt-0">Email:</h3>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutral-950 md:pb-xxs">København & Roskilde:</h5>
-                <p class="text-p text-neutrals-950 pt-xxs md:pt-sm">kontakt@detkollektiveklaedeskab.dk</p>
-                <h5 class="text-h5_m lg:text-h5_d font-sans font-bold text-neutral-950 pt-m md:pb-xxs">Aarhus:</h5>
-                <p class="text-p text-neutrals-950 pt-xxs md:pt-sm">aarhus@detkollektiveklaedeskab.dk</p>
+                <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pt-l pb-m md:pt-0">Kontakt</h3>
+                <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutral-950 md:pb-xxs">E-mail til København & Roskilde</h6>
+                <p class="text-p text-neutrals-950 pt-xxs">kontakt@detkollektiveklaedeskab.dk</p>
+                <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutral-950 pt-m md:pb-xxs">E-mail til Aarhus</h6>
+                <p class="text-p text-neutrals-950 pt-xxs">aarhus@detkollektiveklaedeskab.dk</p>
+                <h6 class="text-h6_m lg:text-h6_d font-sans font-bold text-neutral-950 pt-m md:pb-xxs">Telefon</h6>
+                <p class="text-p text-neutrals-950 pt-xxs">+45 60 58 17 35</p>
               </div>
-              <div>
-                <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pt-l pb-m md:pb-s">Telefon:</h3>
+              <!-- <div>
+                <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pt-l pb-m md:pb-s">Telefon</h3>
                 <p class="text-p text-neutrals-950 md:pt-sm">+45 60 58 17 35</p>
                 <p class="text-p text-neutrals-950 pt-xxs md:pt-sm">Kan kontaktes hverdage mellem kl. 8-16.</p>
+              </div> -->
+              <div>
+                <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pt-l pb-m md:pb-s">Tilmeld nyhedsbrev</h3>
+                <p class="text-p font-sans text-brown-800">Skriv din email og få nyheder<br />sendt løbende.</p>
+                <form class="space-y-s pt-s" name="nyhedsbrev" netlify>
+                  <input class="rounded-border-radius-11 border-none py-s px-m min-w-[16.125rem] bg-neutrals-50" id="email" name="email" type="email" placeholder="andersandersen@mail.dk" />
+                  <div class="max-w-60">
+                    <Button href="/koncept" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Indsend</Button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
