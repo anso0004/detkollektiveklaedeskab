@@ -29,14 +29,10 @@ import linemd from "../assets/images/linemd.svg";
         <p class="text-p font-sans">Med et Basis-abonnement, er den valgte butik den eneste butik, som du kan benytte.</p>
       </section>
 
-      <section class="grid grid-cols-2 gap-sm md:gap-ml md:mb-6xl lg:max-w-[40rem] mb-3xl" x-data="{ selected: '' }">
+      <section class="grid grid-cols-2 gap-sm md:gap-ml md:mb-2xl lg:max-w-[40rem] mb-3xl" x-data="{ selected: '' }">
         <!-- Hjælp fra Chat-GPT -->
         <!-- Roskilde -->
-        <p
-          class="md:rounded-border-radius-43 rounded-border-radius-11 border-none md:py-l py-m px-m md:min-w-[16.125rem] text-h5_m font-bold font-sans md:text-h5_d cursor-pointer flex items-center justify-center"
-          :class="{ 'bg-green-500 text-white': selected === 'roskilde', 'bg-neutrals-50': selected !== 'roskilde' }"
-          x-on:click="selected = 'roskilde'"
-        >
+        <p class="md:rounded-border-radius-43 rounded-border-radius-11 border-none md:py-l py-m px-m md:min-w-[16.125rem] text-h5_m font-bold font-sans md:text-h5_d cursor-pointer flex items-center justify-center" :class="{ 'bg-green-500 text-white': selected === 'roskilde', 'bg-neutrals-50': selected !== 'roskilde' }" x-on:click="selected = 'roskilde'">
           Roskilde<span class="nowrap"><img x-show="selected === 'roskilde'" src="/check_darkgreen.svg" alt="Checkmark ikon" class="h-6 w-6 ml-2" /></span>
         </p>
 
@@ -51,11 +47,7 @@ import linemd from "../assets/images/linemd.svg";
         </p>
 
         <!-- Vesterbro -->
-        <p
-          class="md:rounded-border-radius-43 rounded-border-radius-11 border-none md:py-l py-m px-m md:min-w-[16.125rem] text-h5_m font-bold font-sans md:text-h5_d cursor-pointer flex items-center justify-center"
-          :class="{ 'bg-green-500 text-white': selected === 'vesterbro', 'bg-neutrals-50': selected !== 'vesterbro' }"
-          x-on:click="selected = 'vesterbro'"
-        >
+        <p class="md:rounded-border-radius-43 rounded-border-radius-11 border-none md:py-l py-m px-m md:min-w-[16.125rem] text-h5_m font-bold font-sans md:text-h5_d cursor-pointer flex items-center justify-center" :class="{ 'bg-green-500 text-white': selected === 'vesterbro', 'bg-neutrals-50': selected !== 'vesterbro' }" x-on:click="selected = 'vesterbro'">
           Vesterbro<span class="nowrap"><img x-show="selected === 'vesterbro'" src="/check_darkgreen.svg" alt="Checkmark ikon" class="h-6 w-6 ml-2" /></span>
         </p>
       </section>
