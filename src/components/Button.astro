@@ -23,12 +23,17 @@ const hoverClasses = {
   footerhover: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-yellow-500 transition-transform cursor-pointer",
   parapraphhover: "flex hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-neutrals-50 transition-transform cursor-pointer",
 };
+
+const cursorClasses = {
+  blue: "cursor cursor-blue_yellow_cursor",
+  yellow: "cursor cursor-yellow_blue_cursor",
+};
 ---
 
 <div class="flex">
-  <div class:list={[hoverClasses[hover]]}>
+  <div class:list={[hoverClasses[hover], cursorClasses[cursor]]}>
     <img src={cardimage_r} alt={cardimagealt} />
-    <button class:list={[buttonStyling, variantClasses[variant]]}>
+    <button class:list={[buttonStyling, variantClasses[variant], cursorClasses[cursor]]}>
       <slot />
     </button>
     <img src={cardimage_l} alt={cardimagealt} />
