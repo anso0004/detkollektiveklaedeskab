@@ -149,11 +149,11 @@ import skab from "../assets/images/skab.svg";
 
     const items = document.querySelectorAll("#horisontalliste li");
 
-    if (screenwidth > 1300) {
+    if (screenwidth > 1500) {
       console.log("stor");
       scroll(
         animate("#horisontalliste", {
-          transform: ["none", `translateX(-${items.length - 3}00vw)`],
+          transform: ["none", `translateX(-${items.length - 4}00vw)`],
         }),
         { target: document.querySelector("#horisontalscrollsection") }
       );
