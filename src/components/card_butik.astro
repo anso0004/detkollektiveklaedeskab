@@ -5,11 +5,11 @@ import Linket from "../components/Linket.astro";
 
 <article class="card bg-neutrals-50 rounded-border-radius-43 max-w-[327px] flex flex-col @container lg:max-w-[367px] hover:scale-105 transition-transform">
   <a href={url}>
-    <img src={cardimage} alt={cardimagealt} />
+    <img src={cardimage} alt={cardimagealt} class="cursor cursor-yellow_blue_cursor" />
     <section class="space-y-ml px-ml pt-m pb-ml 2xl:p-xl">
-      <div class="space-y-sm">
+      <div class="space-y-sm cursor cursor-yellow_blue_cursor">
         <h5 class="text-h5_m font-sans font-bold lg:text-h5_d">{overskrift}</h5>
-        <div class="space-y-xxs">
+        <div class="space-y-xxs cursor cursor-yellow_blue_cursor">
           <h6 class="text-h6_m font-sans font-regular lg:text-h6_d">{adresse1}</h6>
           <h6 class="text-h6_m font-sans font-regular lg:text-h6_d">{adresse2}</h6>
         </div>
