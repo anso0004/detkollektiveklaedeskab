@@ -8,7 +8,7 @@ import Linket from "../components/Linket.astro";
       <nav id="desktopmenu" class="hidden lg:flex">
         <ul class="flex flex-row gap-ml items-center">
           <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="/koncept">Koncept</Linket></li>
-          <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="#">Abonnement</Linket></li>
+          <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="/abonnement">Abonnement</Linket></li>
           <a href="#index"><img src="/logo.svg" alt="Logo" class="max-w-36 hidden lg:block" /> </a>
           <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="/om">Om os</Linket></li>
           <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="/kontakt">Kontakt</Linket></li>
@@ -25,7 +25,7 @@ import Linket from "../components/Linket.astro";
       <nav id="mobilmenu" class="flex flex-col content-center pt-4 gap-ml bg-yellow-500 w-screen h-screen" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
         <ul>
           <li class="text-center py-2 border-y-2"><Linket variant="header_primary" hover="hoverheaderyellow" href="/koncept">Koncept</Linket></li>
-          <li class="text-center py-2 border-b-2"><Linket variant="header_primary" hover="hoverheaderyellow" href="#">Login</Linket></li>
+          <li class="text-center py-2 border-b-2"><Linket variant="header_primary" hover="hoverheaderyellow" href="/abonnement">Abonnement</Linket></li>
           <li class="text-center py-2 border-b-2"><Linket variant="header_primary" hover="hoverheaderyellow" href="/om">Om os</Linket></li>
           <li class="text-center py-2 border-b-2"><Linket variant="header_primary" hover="hoverheaderyellow" href="/kontakt">Kontakt</Linket></li>
         </ul>
