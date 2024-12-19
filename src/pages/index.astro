@@ -1,5 +1,4 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
 import SecondaryLayout from "../layouts/SecondaryLayout.astro";
 import Abonnements from "../components/card_abonnement.astro";
 import Anmeldelse from "../components/card_anmeldelse.astro";
@@ -9,7 +8,6 @@ import Goersom from "../components/goersom.astro";
 import { Image } from "astro:assets";
 import figure_blue from "../assets/images/section_1.svg";
 import large1 from "../assets/images/large_1.webp";
-import hero_bg from "../assets/images/hero_bg.png";
 import hero_blue from "../assets/images/figure_blue.svg";
 import hero_brown from "../assets/images/figure_brown.svg";
 import hero_image from "../assets/images/figure_1.webp";
@@ -204,7 +202,7 @@ const schemamarkup = {
 >
 
 <script>
-  import { animate, scroll, inView } from "motion";
+  import { animate, scroll } from "motion";
 
   const screenwidth = window.innerWidth;
 
