@@ -34,21 +34,6 @@ import Steps from "../components/5steps.astro";
       <Image src={hero_blue} alt="Blå figur" class="absolute top-80 w-48 right-5 md:top-52" />
     </div>
   </article>
-
-  <!-- <article class="lg:hidden">
-    <div class="max-w-[20.375rem] md:max-w-[43rem] mx-auto flex flex-col gap-m">
-      <h1 class="text-h1_m font-bold font-display text-brown-800">Mode skal deles og ikke spildes</h1>
-      <div class="flex flex-col gap-m">
-        <Linket href="/abonnement" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Se abonnementer</Linket>
-        <Linket href="/koncept" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Sådan gør du</Linket>
-      </div>
-    </div>
-    <div class="relative">
-      <Image src={hero_brown} alt="Brun figur" class="absolute top-40 w-96 right-0" />
-      <Image src={hero_image} alt="Billede af pige i butik" class="absolute top-20 w-80 right-5" />
-      <Image src={hero_blue} alt="Blå figur" class="absolute top-80 w-48 right-5" />
-    </div>
-  </article> -->
   <!-- Hero på desktop -->
   <article class="cursor cursor-blue_yellow_cursor">
     <div class="parallaxgrafik fullwidthsection hidden lg:block">
@@ -74,31 +59,32 @@ import Steps from "../components/5steps.astro";
       </div>
       <div class="h-[100vh]"></div>
     </div>
-
     <section class="my-13xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto cursor cursor-blue_yellow_cursor">
       <h1 class="mt-[600px] md:mt-0 text-h1_m md:text-h2_d lg:text-h1_d font-display text-brown-800 text-center mb-2xl md:mb-5xl">Byt dit tøj <br /> Forny din stil</h1>
-      <div class="md:flex md:flex-row md:justify-center md:gap-10xl grid justify-items-center gap-m">
-        <div class="md:max-w-60">
-          <Linket href="/koncept" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Sådan gør du</Linket>
+      <div class="md:flex md:flex-row md:justify-center md:gap-2xl grid justify-items-center gap-m">
+        <div class="md:max-w-70">
+          <Linket href="#" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Tilmeld nyhedsbrev</Linket>
         </div>
         <div class="md:max-w-60">
-          <Linket href="#" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Bliv frivillig</Linket>
+          <Linket href="/koncept" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Forstå konceptet</Linket>
         </div>
       </div>
     </section>
     <section class="cursor cursor-yellow_blue_cursor">
-      <h1 class="text-h1_m font-display text-brown-800 font-bold lg:text-h1_d max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto mb-xl">Vælg dit abonnement</h1>
       <div class="z-30">
         <Image class="flip_horisontal w-full -mb-1" src={figure_blue} alt="Blå bue" />
-        <div class="bg-blue-500 h-[900px] md:h-[328px]"></div>
+        <div class="bg-blue-500 h-[900px] md:h-[528px] xl:h-[428px]"></div>
         <Image class="flip_vertikal w-full -mt-1" src={figure_blue} alt="Blå bue" />
       </div>
-      <div class="mt-[-900px] md:mt-[-380px] lg:mt-[-500px] max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto grid grid-cols-12 space-y-l md:space-y-0 md:gap-l">
-        <div class="z-50 col-start-1 col-span-12 md:col-start-1 md:col-span-6 lg:col-start-2 lg:col-span-5 xl:col-start-3 xl:col-span-4">
-          <Abonnements url="/koeb_basis1" badge="false" type="Basis" pris="199" icon1="/check_black.svg" iconalt1="Sort check-ikon" icon2="/check_black.svg" iconalt2="Sort check-ikon" icon3="/check_black.svg" iconalt3="Sort check-ikon" icon4="/cross_red.svg" iconalt4="Rødt kryds-ikon" icon5="/cross_red.svg" iconalt5="Rødt kryds-ikon" />
-        </div>
-        <div class="z-50 col-start-1 col-span-12 md:col-start-7 md:col-span-6 lg:col-start-7 lg:col-span-5 xl:col-start-7 xl:col-span-4">
-          <Abonnements url="/koeb_plus" badge="true" type="Plus" pris="299" icon1="/check_black.svg" iconalt1="Sort check-ikon" icon2="/check_black.svg" iconalt2="Sort check-ikon" icon3="/check_black.svg" iconalt3="Sort check-ikon" icon4="/check_black.svg" iconalt4="Sort check-ikon" icon5="/check_black.svg" iconalt5="Sort check-ikon" />
+      <div class="mt-[-900px] md:mt-[-600px] lg:mt-[-600px] xl:mt-[-580px] max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+        <h1 class="text-center grid justify-center pb-m text-h2_m font-display text-neutrals-50 font-bold lg:text-h2_d max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto mb-xl">Vælg dit abonnement</h1>
+        <div class="grid grid-cols-12 space-y-l md:space-y-0 md:gap-l">
+          <div class="z-50 col-start-1 col-span-12 md:col-start-1 md:col-span-6 lg:col-start-2 lg:col-span-5 xl:col-start-3 xl:col-span-4">
+            <Abonnements url="/koeb_basis1" badge="false" type="Basis" pris="199" icon1="/check_black.svg" iconalt1="Sort check-ikon" icon2="/check_black.svg" iconalt2="Sort check-ikon" icon3="/check_black.svg" iconalt3="Sort check-ikon" icon4="/cross_red.svg" iconalt4="Rødt kryds-ikon" icon5="/cross_red.svg" iconalt5="Rødt kryds-ikon" />
+          </div>
+          <div class="z-50 col-start-1 col-span-12 md:col-start-7 md:col-span-6 lg:col-start-7 lg:col-span-5 xl:col-start-7 xl:col-span-4">
+            <Abonnements url="/koeb_plus" badge="true" type="Plus" pris="299" icon1="/check_black.svg" iconalt1="Sort check-ikon" icon2="/check_black.svg" iconalt2="Sort check-ikon" icon3="/check_black.svg" iconalt3="Sort check-ikon" icon4="/check_black.svg" iconalt4="Sort check-ikon" icon5="/check_black.svg" iconalt5="Sort check-ikon" />
+          </div>
         </div>
       </div>
     </section>
