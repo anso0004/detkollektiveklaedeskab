@@ -57,12 +57,24 @@ import Steps from "../components/5steps.astro";
 
     <!-- HHHHERRRRR Hero med stickyscroll og parallaxscroll -->
     <div class="parallaxgrafik fullwidthsection">
-      <div class="sticky top-0 left-0 right-0 bottom-0 grid grid-cols-12 grid-rows-6 bg-teal-100 mt-8 h-screen w-full bg-cover bg-center overflow-hidden" style="background-image: url('/hero_bg.png');">
-        <div></div>
+      <div class="sticky top-0 left-0 right-0 bottom-0 mt-8 h-screen w-full bg-cover bg-center overflow-hidden" style="background-image: url('/hero_bg.png');">
         <div class="relative">
-          <Image src={hero_blue} alt="" class="col-start-2 parallaxgrafik1" />
-          <Image src={hero_brown} alt="" class="col-start-5 parallaxgrafik2" />
-          <Image src={hero_image} alt="" class="col-start-3 col-span-2 parallaxgrafik3" />
+          <Image src={hero_blue} alt="Blå figur" class="absolute parallaxgrafik1 z-10 h-screen w-auto" />
+          <Image src={hero_brown} alt="Brun figur" class="absolute parallaxgrafik2 z-10 h-screen w-auto" />
+          <div class="absolute z-30 parallaxgrafik2 flex flex-col gap-xl">
+            <h1 class="text-h1_m md:text-h1_d font-display text-yellow-500 font-bold">Fordi mode <br /> skal deles og <br /> ikke spildes</h1>
+            <div class="flex flex-col gap-m">
+              <Linket class="" url="#" variant="secondary" hover="hover" cardimage_r="/yellow_l.svg" cardimage_l="/yellow_r.svg" cardimage_r_alt="gul højre side" cardimage_l_alt="gul venstre side">Se abonnementer</Linket>
+              <Linket class="" url="#" variant="secondary" hover="hover" cardimage_r="/yellow_l.svg" cardimage_l="/yellow_r.svg" cardimage_r_alt="gul højre side" cardimage_l_alt="gul venstre side">Sådan gør du</Linket>
+            </div>
+          </div>
+          <Image src={hero_image} alt="Billede af pige i butik" class="absolute parallaxgrafik4 z-50 h-screen w-auto" />
+        </div>
+        <div class="absolute bottom-4 left-[45%] place-items-center z-50">
+          <div class="flex">
+            <Image class="" src={arrow} alt="Ikon pil" />
+            <h6 class="text-h6_m font-sans text-brown-800 font-bold md:text-h6_d">Scoll ned</h6>
+          </div>
         </div>
       </div>
       <div class="h-[100vh]"></div>
@@ -133,9 +145,30 @@ import Steps from "../components/5steps.astro";
       <div class="mt-[-1800px] md:mt-[-1800px] lg:mt-[-630px] xl:mt-[-580px] 2xl:mt-[-600px] max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
         <h2 class="text-h2_m font-display font-bold text-neutrals-50 md:text-h2_d text-center mb-xl">Vi deler klædeskab</h2>
         <div class="z-50 relative grid gap-2xl lg:grid-cols-3">
-          <Anmeldelse url="#" cardimage="anmeldelse_1.webp" cardimagealt="Ung kvinde" overskrift="Sofia, 24 år" underoverskrift="Himmelev, Roskilde" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
-          <Anmeldelse url="#" cardimage="anmeldelse_2.webp" cardimagealt="Ung kvinde" overskrift="Marie, 20 år" underoverskrift="Nørrebro, København" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
-          <Anmeldelse url="#" cardimage="anmeldelse_3.webp" cardimagealt="Ung mand" overskrift="Jonas, 27 år" underoverskrift="Vesterbro, København" anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt." />
+          <Anmeldelse
+            url="#"
+            cardimage="anmeldelse_1.webp"
+            cardimagealt="Ung kvinde"
+            overskrift="Sofia, 24 år"
+            underoverskrift="Himmelev, Roskilde"
+            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
+          />
+          <Anmeldelse
+            url="#"
+            cardimage="anmeldelse_2.webp"
+            cardimagealt="Ung kvinde"
+            overskrift="Marie, 20 år"
+            underoverskrift="Nørrebro, København"
+            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
+          />
+          <Anmeldelse
+            url="#"
+            cardimage="anmeldelse_3.webp"
+            cardimagealt="Ung mand"
+            overskrift="Jonas, 27 år"
+            underoverskrift="Vesterbro, København"
+            anmeldelse="For mig er Det Kollektive Klædeskab en bæredygtig måde at forny garderoben på. Med et billigt månedligt abonnement kan jeg aflevere tøj og bytte det til nyt. Konceptet fungerer virkelig godt."
+          />
         </div>
       </div>
     </section>
@@ -169,19 +202,19 @@ import Steps from "../components/5steps.astro";
   import { animate, scroll, inView } from "motion";
 
   /* inView animatio 1n */
-  inView(".fotoinview1", () => {
-    animate(".fotoinview1", { x: [0, -450] }, { duration: 4 });
-  });
+  // inView(".fotoinview1", () => {
+  //   animate(".fotoinview1", { x: [0, -450] }, { duration: 4 });
+  // });
 
-  /* inView animatio 2n */
-  inView(".fotoinview2", () => {
-    animate(".fotoinview2", { x: [300, -500] }, { duration: 3 });
-  });
+  // /* inView animatio 2n */
+  // inView(".fotoinview2", () => {
+  //   animate(".fotoinview2", { x: [300, -500] }, { duration: 3 });
+  // });
 
-  /* inView animatio 3n */
-  inView(".fotoinview3", () => {
-    animate(".fotoinview3", { x: [700, 1250] }, { duration: 3 });
-  });
+  // /* inView animatio 3n */
+  // inView(".fotoinview3", () => {
+  //   animate(".fotoinview3", { x: [800, 1250] }, { duration: 3 });
+  // });
 
   // scroll(animate(".parallaxgrafik1", { x: [400, -400] }), {
   //   target: document.querySelector(".parallaxgrafik"),
@@ -198,15 +231,19 @@ import Steps from "../components/5steps.astro";
 
   /* Import af Motion One biblioteket */
 
-  scroll(animate(".parallaxgrafik1", { x: [400, -400] }), {
+  scroll(animate(".parallaxgrafik1", { x: [-500, -1100] }), {
     target: document.querySelector(".parallaxgrafik"),
     offset: ["start end", "end start"],
   });
-  scroll(animate(".parallaxgrafik2", { x: [-100, 100] }), {
+  scroll(animate(".parallaxgrafik2", { x: [800, 50] }), {
     target: document.querySelector(".parallaxgrafik"),
     offset: ["start end", "end start"],
   });
-  scroll(animate(".parallaxgrafik3", { x: [-500, 500] }), {
+  scroll(animate(".parallaxgrafik3", { x: [750, 1700] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik4", { x: [750, 1700] }), {
     target: document.querySelector(".parallaxgrafik"),
     offset: ["start end", "end start"],
   });
