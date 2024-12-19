@@ -9,7 +9,7 @@ import Linket from "../components/Linket.astro";
         <ul class="flex flex-row gap-ml items-center">
           <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="/koncept">Koncept</Linket></li>
           <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="/abonnement">Abonnement</Linket></li>
-          <a href="#index"><img src="/logo.svg" alt="Logo" class="max-w-36 hidden lg:block" /> </a>
+          <a href="/"><img src="/logo.svg" alt="Logo" class="max-w-36 hidden lg:block" /> </a>
           <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="/om">Om os</Linket></li>
           <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="/kontakt">Kontakt</Linket></li>
         </ul>
@@ -17,7 +17,7 @@ import Linket from "../components/Linket.astro";
     </div>
     <div class="p-5 z-50">
       <div class="flex justify-between">
-        <a href="#index"><img src="/logo_dark.svg" alt="Logo" class="max-w-32 lg:hidden" /> </a>
+        <a href="/"><img src="/logo_dark.svg" alt="Logo" class="max-w-32 lg:hidden" /> </a>
         <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu">
           <img :src="showmenu ? '/cross_black.svg' : '/burger.svg'" alt="Menu" />
         </button>
