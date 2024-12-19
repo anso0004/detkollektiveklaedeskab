@@ -14,7 +14,7 @@ import hero_image from "../assets/images/figure_1.webp";
 <MainLayout title="Om os">
   <article class="cursor cursor-blue_yellow_cursor">
     <article class="cursor cursor-blue_yellow_cursor">
-      <section class="md:grid md:grid-cols-2 gap-6 ml-12xl">
+      <section class="md:grid md:grid-cols-2 gap-6 md:ml-12xl md:mr-0 ml-7 mr-7">
         <div class="">
           <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 pb-l md:pb-3xl">Om os</h1>
           <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pb-m md:pb-s">Siden 2014</h3>
@@ -31,7 +31,7 @@ import hero_image from "../assets/images/figure_1.webp";
         <div>
           <!-- <Image class="" src={figure1} alt="Figur med pige" /> -->
           <div class="parallaxgrafik">
-            <div class="top-0 left-0 right-0 bottom-0 mt-8 h-screen w-full bg-cover bg-center overflow-hidden">
+            <div class="top-0 left-0 right-0 bottom-0 mt-8 md:h-screen h-[600px] w-full bg-cover bg-center overflow-hidden">
               <div></div>
               <div class="relative">
                 <Image src={hero_brown} alt="" class="absolute top-14 w-5/6 parallaxgrafik1" />
@@ -44,34 +44,6 @@ import hero_image from "../assets/images/figure_1.webp";
         </div>
       </section>
     </article>
-    <!-- <section class="lg:grid lg:grid-cols-2 gap-10 ml-12xl">
-      <div class="">
-        <h1 class="text-h1_m lg:text-h1_d font-display text-brown-800 pb-l md:pb-3xl">Om os</h1>
-        <h3 class="text-h3_m lg:text-h3_d font-display text-brown-800 pb-m md:pb-s">Siden 2014</h3>
-        <div class="space-y-sm">
-          <p class="text-p font-sans">Det Kollektive Klædeskab opstod som en forretningsidé, der skulle gøre op med den forurenende tøjindustri. Grundlæggeren Louise tænte, at hvis man skabte et abonnement, der kunne ændre vores tøjvaner, så man i stedet for at købe nyt kunne dele et fælles klædeskab.</p>
-          <p class="text-p font-sans">Der gik mange år, hvor konceptet blev afprøvet, men det var svært at få kunderne med på en dele-idé. Det endte med, at én af butikkerne blev solgt til Lene, som i dag er CEO og butiksejer i København og Roskilde.</p>
-          <p class="text-p font-sans">Lene fik spark i de sociale medier, især Instagram, hvor følgerantallet på en kort periode steg drastisk. I dag består Det Kollektive Klædeskab af fire butikker med tre fulstidsansatte og et team af frivillige, der er med til at drive forretningen mod en bæredygtigere verden.</p>
-        </div>
-        <div class="cursor cursor-blue_yellow_cursor pt-l">
-          <div class="md:max-w-60">
-            <Linket href="#" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Se abonnementer</Linket>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="parallaxgrafik">
-          <div class="top-0 left-0 right-0 bottom-0 mt-8 h-screen w-full bg-cover bg-center overflow-hidden">
-            <div></div>
-            <div class="relative">
-              <Image src={hero_brown} alt="" class="absolute top-14 w-5/6 parallaxgrafik" />
-              <Image src={hero_image} alt="" class="absolute top-6 w-4/6 parallaxgrafik" />
-              <Image src={hero_blue} alt="" class="absolute top-72 w-2/6 parallaxgrafik" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
   </article>
 
   <section class="cursor cursor-yellow_blue_cursor">
@@ -133,21 +105,11 @@ import hero_image from "../assets/images/figure_1.webp";
   /* Import af Motion One biblioteket */
   import { animate, stagger, inView, scroll, timeline } from "motion";
 
-  // scroll(
-  //   animate(".scrollzoomimg", {
-  //     scale: [1, 1.1],
-  //   }),
-  //   {
-  //     target: document.querySelector(".scrollzoom"),
-  //     offset: ["0.75 end", "end end"],
-  //   }
-  // );
-
   scroll(animate(".parallaxgrafik1", { x: [300, 100] }), {
     target: document.querySelector(".parallaxgrafik"),
     offset: ["start end", "end start"],
   });
-  scroll(animate(".parallaxgrafik2", { x: [300, -200] }), {
+  scroll(animate(".parallaxgrafik2", { x: [300, -100] }), {
     target: document.querySelector(".parallaxgrafik"),
     offset: ["start end", "end start"],
   });

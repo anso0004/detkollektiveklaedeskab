@@ -13,7 +13,7 @@ import hero_image from "../assets/images/figure_1.webp";
 
 <MainLayout title="Koncept">
   <article class="cursor cursor-blue_yellow_cursor">
-    <section class="md:grid md:grid-cols-2 gap-6 ml-12xl">
+    <section class="md:grid md:grid-cols-2 gap-6 md:ml-12xl md:mr-0 ml-7 mr-7">
       <div class="">
         <h1 class="text-h1_m md:text-h1_d font-display text-brown-800 pb-3xl">Koncept</h1>
         <h3 class="text-h3_m md:text-h3_d font-display text-brown-800 pb-s">Et cirkulært klædeskab</h3>
@@ -31,7 +31,7 @@ import hero_image from "../assets/images/figure_1.webp";
       <div>
         <!-- <Image class="" src={figure1} alt="Figur med pige" /> -->
         <div class="parallaxgrafik">
-          <div class="top-0 left-0 right-0 bottom-0 mt-8 h-screen w-full bg-cover bg-center overflow-hidden">
+          <div class="top-0 left-0 right-0 bottom-0 mt-8 md:h-screen h-[600px] w-full bg-cover bg-center overflow-hidden">
             <div></div>
             <div class="relative">
               <Image src={hero_brown} alt="" class="absolute top-14 w-5/6 parallaxgrafik1" />
@@ -61,7 +61,7 @@ import hero_image from "../assets/images/figure_1.webp";
       <div class="pb-l content-center">
         <h1 class="text-h1_m md:text-h2_d lg:text-h1_d font-display text-brown-800 text-right fittysmall">Ofte <br />stillede <br /> spørgsmål</h1>
       </div>
-      <div>
+      <div class="">
         <Accordion txt="Hvordan kommer jeg ind i butikken?" size="desktop">
           <p class="text-p text-neutrals-950 pt-sm">Når du er medlem og kommer i vores butikker, vil du kunne komme til en butik, der er helt klar til dig, men hvor døren er låst. Da låser du dig ind med en kode eller ved at bruge nøglen, som er i en nøgleboks. Den aktuelle kode finder du i appen. Vær opmærksom på, at du kun kan og må lukke dig selv ind i butikken i vores åbningstid, som du finder her. Uden for åbningstiden har vi alarm på.</p>
         </Accordion>
@@ -91,21 +91,11 @@ import hero_image from "../assets/images/figure_1.webp";
   /* Import af Motion One biblioteket */
   import { animate, stagger, inView, scroll, timeline } from "motion";
 
-  scroll(
-    animate(".scrollzoomimg", {
-      scale: [1, 1.1],
-    }),
-    {
-      target: document.querySelector(".scrollzoom"),
-      offset: ["0.75 end", "end end"],
-    }
-  );
-
   scroll(animate(".parallaxgrafik1", { x: [300, 100] }), {
     target: document.querySelector(".parallaxgrafik"),
     offset: ["start end", "end start"],
   });
-  scroll(animate(".parallaxgrafik2", { x: [300, -200] }), {
+  scroll(animate(".parallaxgrafik2", { x: [300, -100] }), {
     target: document.querySelector(".parallaxgrafik"),
     offset: ["start end", "end start"],
   });
