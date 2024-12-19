@@ -2,20 +2,20 @@
 import Linket from "../components/Linket.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="p-4 lg:static w-full bg-slate-200">
+<div x-data="{ showmenu: false }" class="p-4 lg:fixed w-full bg-slate-200 z-50">
   <div id="navbar" class="">
     <div id="logo" class="flex flex-row lg:justify-center">
       <nav id="desktopmenu" class="hidden lg:flex">
-        <ul class="flex flex-row gap-ml">
+        <ul class="flex flex-row gap-ml items-center">
           <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="/koncept">Koncept</Linket></li>
           <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="#">Login</Linket></li>
-          <a href="#index"><img src="/logo.svg" alt="Logo" class="max-w-32 hidden lg:block" /> </a>
+          <a href="#index"><img src="/logo.svg" alt="Logo" class="max-w-36 hidden lg:block" /> </a>
           <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="/om">Om os</Linket></li>
           <li class=""><Linket variant="header_secondary" hover="hoverheaderyellow" href="/kontakt">Kontakt</Linket></li>
         </ul>
       </nav>
     </div>
-    <div class="p-5 z-50 bg-yellow-500">
+    <div class="p-5 z-50">
       <div class="flex justify-between">
         <a href="#index"><img src="/logo_dark.svg" alt="Logo" class="max-w-32 lg:hidden" /> </a>
         <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu">

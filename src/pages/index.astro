@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import SecondaryLayout from "../layouts/SecondaryLayout.astro";
 import Abonnements from "../components/card_abonnement.astro";
 import Anmeldelse from "../components/card_anmeldelse.astro";
 import SoMe_large from "../components/some_large.astro";
@@ -17,58 +18,37 @@ import Linket from "../components/Linket.astro";
 import Steps from "../components/5steps.astro";
 ---
 
-<MainLayout title="Forside">
+<SecondaryLayout title="Forside">
+  <!-- Hero på mobile -->
+  <article>
+    <div class="max-w-[20.375rem] md:max-w-[43rem] mx-auto flex flex-col gap-m">
+      <h1 class="text-h1_m font-bold font-display text-brown-800">Mode skal deles og ikke spildes</h1>
+      <div class="flex flex-col gap-m">
+        <Linket href="/abonnement" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Se abonnementer</Linket>
+        <Linket href="/koncept" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Sådan gør du</Linket>
+      </div>
+    </div>
+    <div class="relative">
+      <Image src={hero_blue} alt="Blå figur" class="absolute" />
+      <Image src={hero_brown} alt="Brun figur" class="absolute" />
+      <Image src={hero_image} alt="Billede af pige i butik" class="absolute" />
+    </div>
+  </article>
+  <!-- Hero på desktop -->
   <article class="">
-    <!-- <section>
-      <div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('/hero_bg.png')">
-        <div class="relative parallaxgrafik"></div>
-        <div class="grid grid-cols-12">
-          <Image class="absolute top-[-1000px] col-start-2 parallaxgrafik1" src={hero_blue} alt="Blå figur" />
-          <Image class="absolute top-[-1000px] col-start-4 parallaxgrafik2" src={hero_brown} alt="Brun figur" />
-          <Image class="absolute top-[-1000px] col-start-8 parallaxgrafik3" src={hero_image} alt="Brun figur" />
-        </div>
-        <div class="h-[50vh]"></div>
-      </div>
-    </section> -->
-
-    <!-- Hero med stickyscroll -->
-    <!-- <article>
-      <div class="horisontalscrollsection sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style="background-image: url('/hero_bg.png')"></div>
-      <div class="relative">
-        <div class="">
-          <Image class="" src={hero_blue} alt="Blå figur" />
-          <Image class="" src={hero_brown} alt="Brun figur" />
-          <Image class="" src={hero_image} alt="Brun figur" />
-        </div>
-      </div>
-      <div class="h-[100vh]"></div>
-    </article> -->
-
-    <!-- Hero med parallaxscroll -->
-    <!-- <section class="parallaxgrafik fullwidthsection">
-      <div class="top-0 left-0 right-0 bottom-0 grid grid-cols-12 grid-rows-6 bg-teal-100 mt-8 h-screen w-full bg-cover bg-center overflow-hidden" style="background-image: url('/hero_bg.png');">
-        <div class="relative">
-          <Image src={hero_blue} alt="" class="col-start-2 parallaxgrafik1" />
-          <Image src={hero_brown} alt="" class="col-start-5 parallaxgrafik2" />
-          <Image src={hero_image} alt="" class="col-start-3 col-span-2 parallaxgrafik3" />
-        </div>
-      </div>
-    </section> -->
-
-    <!-- HHHHERRRRR Hero med stickyscroll og parallaxscroll -->
-    <div class="parallaxgrafik fullwidthsection">
-      <div class="sticky top-0 left-0 right-0 bottom-0 mt-8 h-screen w-full bg-cover bg-center overflow-hidden" style="background-image: url('/hero_bg.png');">
+    <div class="parallaxgrafik fullwidthsection hidden lg:block">
+      <div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center overflow-hidden" style="background-image: url('/hero_bg.png');">
         <div class="relative">
           <Image src={hero_blue} alt="Blå figur" class="absolute parallaxgrafik1 z-10 h-screen w-auto" />
           <Image src={hero_brown} alt="Brun figur" class="absolute parallaxgrafik2 z-10 h-screen w-auto" />
-          <div class="absolute z-30 parallaxgrafik2 flex flex-col gap-xl">
-            <h1 class="text-h1_m md:text-h1_d font-display text-yellow-500 font-bold">Fordi mode <br /> skal deles og <br /> ikke spildes</h1>
-            <div class="flex flex-col gap-m">
-              <Linket class="" url="#" variant="secondary" hover="hover" cardimage_r="/yellow_l.svg" cardimage_l="/yellow_r.svg" cardimage_r_alt="gul højre side" cardimage_l_alt="gul venstre side">Se abonnementer</Linket>
-              <Linket class="" url="#" variant="secondary" hover="hover" cardimage_r="/yellow_l.svg" cardimage_l="/yellow_r.svg" cardimage_r_alt="gul højre side" cardimage_l_alt="gul venstre side">Sådan gør du</Linket>
+          <div class="absolute top-15xl 2xl:top-18xl z-30 parallaxgrafik4 flex flex-col gap-xl">
+            <h1 class="text-h1_d font-display text-yellow-500 font-bold">Fordi mode <br /> skal deles og <br /> ikke spildes</h1>
+            <div class="flex flex-col gap-m max-w-[250px]">
+              <Linket url="#" variant="secondary" hover="hover" cardimage_r="/yellow_l.svg" cardimage_l="/yellow_r.svg" cardimage_r_alt="gul højre side" cardimage_l_alt="gul venstre side">Se abonnementer</Linket>
+              <Linket url="#" variant="secondary" hover="hover" cardimage_r="/yellow_l.svg" cardimage_l="/yellow_r.svg" cardimage_r_alt="gul højre side" cardimage_l_alt="gul venstre side">Sådan gør du</Linket>
             </div>
           </div>
-          <Image src={hero_image} alt="Billede af pige i butik" class="absolute parallaxgrafik4 z-50 h-screen w-auto" />
+          <Image src={hero_image} alt="Billede af pige i butik" class="absolute parallaxgrafik3 z-50 h-screen w-auto" />
         </div>
         <div class="absolute bottom-4 left-[45%] place-items-center z-50">
           <div class="flex">
@@ -80,24 +60,9 @@ import Steps from "../components/5steps.astro";
       <div class="h-[100vh]"></div>
     </div>
 
-    <!-- In view -->
-    <!-- <div class="relative top-0 left-0 right-0 bottom-0 mt-8 h-screen w-full bg-cover bg-center overflow-hidden" style="background-image: url('/hero_bg.png');">
-      <Image class="absolute fotoinview1" src={hero_blue} alt="Blå figur" />
-      <Image class="absolute right-0 fotoinview2" src={hero_brown} alt="Brun figur" />
-      <Image class="absolute fotoinview3" src={hero_image} alt="Brun figur" />
-      <div class="absolute bottom-4 left-[45%] place-items-center">
-        <div class="flex">
-          <Image class="" src={arrow} alt="Ikon pil" />
-          <h6 class="text-h6_m font-sans text-brown-800 font-bold md:text-h6_d">Scoll ned</h6>
-        </div>
-      </div>
-    </div> -->
-
     <section class="my-13xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <h1 class="text-h1_m md:text-h2_d lg:text-h1_d font-display text-brown-800 text-center mb-2xl md:mb-5xl">Byt dit tøj <br /> Forny din stil</h1>
       <div class="md:flex md:flex-row md:justify-center md:gap-10xl grid justify-items-center gap-m">
-        <!-- <Link left="red_l" right="red_r" hover="hover" variant="primary">Sådan gør du</Link>
-        <Link left="red_l" right="red_r" hover="hover" variant="primary">Bliv frivillig</Link> -->
         <div class="md:max-w-60">
           <Linket href="/koncept" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Sådan gør du</Linket>
         </div>
@@ -115,10 +80,10 @@ import Steps from "../components/5steps.astro";
       </div>
       <div class="mt-[-900px] md:mt-[-380px] lg:mt-[-500px] max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto grid grid-cols-12 space-y-l md:space-y-0 md:gap-l">
         <div class="z-50 col-start-1 col-span-12 md:col-start-1 md:col-span-6 lg:col-start-2 lg:col-span-5 xl:col-start-3 xl:col-span-4">
-          <Abonnements url="#" badge="false" type="Basis" pris="199" icon1="/check_black.svg" iconalt1="Sort check-ikon" icon2="/check_black.svg" iconalt2="Sort check-ikon" icon3="/check_black.svg" iconalt3="Sort check-ikon" icon4="/cross_red.svg" iconalt4="Rødt kryds-ikon" icon5="/cross_red.svg" iconalt5="Rødt kryds-ikon" />
+          <Abonnements url="/koeb_basis1" badge="false" type="Basis" pris="199" icon1="/check_black.svg" iconalt1="Sort check-ikon" icon2="/check_black.svg" iconalt2="Sort check-ikon" icon3="/check_black.svg" iconalt3="Sort check-ikon" icon4="/cross_red.svg" iconalt4="Rødt kryds-ikon" icon5="/cross_red.svg" iconalt5="Rødt kryds-ikon" />
         </div>
         <div class="z-50 col-start-1 col-span-12 md:col-start-7 md:col-span-6 lg:col-start-7 lg:col-span-5 xl:col-start-7 xl:col-span-4">
-          <Abonnements url="#" badge="true" type="Plus" pris="299" icon1="/check_black.svg" iconalt1="Sort check-ikon" icon2="/check_black.svg" iconalt2="Sort check-ikon" icon3="/check_black.svg" iconalt3="Sort check-ikon" icon4="/check_black.svg" iconalt4="Sort check-ikon" icon5="/check_black.svg" iconalt5="Sort check-ikon" />
+          <Abonnements url="/koeb_plus" badge="true" type="Plus" pris="299" icon1="/check_black.svg" iconalt1="Sort check-ikon" icon2="/check_black.svg" iconalt2="Sort check-ikon" icon3="/check_black.svg" iconalt3="Sort check-ikon" icon4="/check_black.svg" iconalt4="Sort check-ikon" icon5="/check_black.svg" iconalt5="Sort check-ikon" />
         </div>
       </div>
     </section>
@@ -195,56 +160,68 @@ import Steps from "../components/5steps.astro";
         </div>
       </div>
     </section>
-  </article></MainLayout
+  </article></SecondaryLayout
 >
 
 <script>
   import { animate, scroll, inView } from "motion";
 
-  /* inView animatio 1n */
-  // inView(".fotoinview1", () => {
-  //   animate(".fotoinview1", { x: [0, -450] }, { duration: 4 });
-  // });
+  const screenwidth = window.innerWidth;
 
-  // /* inView animatio 2n */
-  // inView(".fotoinview2", () => {
-  //   animate(".fotoinview2", { x: [300, -500] }, { duration: 3 });
-  // });
+  // const items = document.querySelectorAll("#horisontalliste li");
 
-  // /* inView animatio 3n */
-  // inView(".fotoinview3", () => {
-  //   animate(".fotoinview3", { x: [800, 1250] }, { duration: 3 });
-  // });
+  if (screenwidth > 1500) {
+    console.log("stor");
+    scroll(animate(".parallaxgrafik1", { x: [-500, -1100] }), {
+      target: document.querySelector(".parallaxgrafik"),
+      offset: ["start end", "end start"],
+    });
+    scroll(animate(".parallaxgrafik2", { x: [800, 50] }), {
+      target: document.querySelector(".parallaxgrafik"),
+      offset: ["start end", "end start"],
+    });
+    scroll(animate(".parallaxgrafik3", { x: [750, 1700] }), {
+      target: document.querySelector(".parallaxgrafik"),
+      offset: ["start end", "end start"],
+    });
+    scroll(animate(".parallaxgrafik4", { x: [2000, 200] }), {
+      target: document.querySelector(".parallaxgrafik"),
+      offset: ["start end", "end start"],
+    });
+  } else {
+    console.log(screenwidth);
+    scroll(animate(".parallaxgrafik1", { x: [-300, -1100] }), {
+      target: document.querySelector(".parallaxgrafik"),
+      offset: ["start end", "end start"],
+    });
+    scroll(animate(".parallaxgrafik2", { x: [650, 50] }), {
+      target: document.querySelector(".parallaxgrafik"),
+      offset: ["start end", "end start"],
+    });
+    scroll(animate(".parallaxgrafik3", { x: [600, 1700] }), {
+      target: document.querySelector(".parallaxgrafik"),
+      offset: ["start end", "end start"],
+    });
+    scroll(animate(".parallaxgrafik4", { x: [1800, 100] }), {
+      target: document.querySelector(".parallaxgrafik"),
+      offset: ["start end", "end start"],
+    });
+  }
 
-  // scroll(animate(".parallaxgrafik1", { x: [400, -400] }), {
+  // scroll(animate(".parallaxgrafik1", { x: [-500, -1100] }), {
   //   target: document.querySelector(".parallaxgrafik"),
   //   offset: ["start end", "end start"],
   // });
-  // scroll(animate(".parallaxgrafik2", { x: [-100, 100] }), {
+  // scroll(animate(".parallaxgrafik2", { x: [800, 50] }), {
   //   target: document.querySelector(".parallaxgrafik"),
   //   offset: ["start end", "end start"],
   // });
-  // scroll(animate(".parallaxgrafik3", { x: [-500, 500] }), {
+  // scroll(animate(".parallaxgrafik3", { x: [750, 1700] }), {
   //   target: document.querySelector(".parallaxgrafik"),
-  //   offset: ["start 50%", "end 0%"],
+  //   offset: ["start end", "end start"],
   // });
-
-  /* Import af Motion One biblioteket */
-
-  scroll(animate(".parallaxgrafik1", { x: [-500, -1100] }), {
-    target: document.querySelector(".parallaxgrafik"),
-    offset: ["start end", "end start"],
-  });
-  scroll(animate(".parallaxgrafik2", { x: [800, 50] }), {
-    target: document.querySelector(".parallaxgrafik"),
-    offset: ["start end", "end start"],
-  });
-  scroll(animate(".parallaxgrafik3", { x: [750, 1700] }), {
-    target: document.querySelector(".parallaxgrafik"),
-    offset: ["start end", "end start"],
-  });
-  scroll(animate(".parallaxgrafik4", { x: [750, 1700] }), {
-    target: document.querySelector(".parallaxgrafik"),
-    offset: ["start end", "end start"],
-  });
+  // scroll(animate(".parallaxgrafik4", { x: [2000, 200] }), {
+  //   target: document.querySelector(".parallaxgrafik"),
+  //   offset: ["start end", "end start"],
+  // });
 </script>
