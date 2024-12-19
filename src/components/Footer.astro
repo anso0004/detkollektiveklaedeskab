@@ -7,7 +7,7 @@ import Linket from "../components/Linket.astro";
 ---
 
 <article class="cursor cursor-yellow_blue_cursor">
-  <Image class="flip_horisontal w-full" src={figure_blue} alt="Blå bue" />
+  <Image class="flip_horisontal w-full mb-[-1px]" src={figure_blue} alt="Blå bue" />
   <section class="bg-blue-500 py-2xl space-y-2xl">
     <div class="flex flex-col gap-2xl lg:flex-row lg:justify-between max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <div class="flex flex-col gap-s">
@@ -15,7 +15,7 @@ import Linket from "../components/Linket.astro";
         <Linket cursor="blue" variant="footerlinks" hover="footerhover" href="/kontakt" target="">Kontakt</Linket>
         <Linket variant="footerlinks" hover="footerhover" href="/kontakt">Åbningtider</Linket>
         <Linket variant="footerlinks" hover="footerhover" href="/kontakt">Butikker</Linket>
-        <Linket variant="footerlinks" hover="footerhover" href="/kontakt">FAQ</Linket>
+        <Linket variant="footerlinks" target="accordion" hover="footerhover" href="/koncept">FAQ</Linket>
         <Linket variant="footerlinks" hover="footerhover" href="/kontakt">Afmeld medlemsskab</Linket>
         <Linket variant="footerlinks" hover="footerhover" href="/kontakt">Medlemsbetingelser</Linket>
         <Linket variant="footerlinks" hover="footerhover" href="/kontakt">Handelsesbetingelser</Linket>
