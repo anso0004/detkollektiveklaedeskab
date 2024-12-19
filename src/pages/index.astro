@@ -58,7 +58,7 @@ const schemamarkup = {
 <SecondaryLayout title="Det Kollektive Klædeskab" description="Det Kollektive Klædeskab har flere butikker, hvor du kan bytte genrbugstøj" ogtitle="Det Kollektive Klædeskab" ogdescription="Bytte af genbrugstøj">
   <!-- Hero på mobile -->
   <article class="lg:hidden md:grid md:grid-cols-2">
-    <div class="max-w-[20.375rem] md:max-w-[43rem] mx-auto flex flex-col gap-m ml-7">
+    <div class="max-w-[20.375rem] md:max-w-[43rem] mx-auto flex flex-col gap-xl ml-7">
       <h1 class="text-h1_m font-bold font-display text-brown-800">Mode skal deles og ikke spildes</h1>
       <div class="flex flex-col gap-m">
         <Linket href="/abonnement" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Se abonnementer</Linket>
@@ -96,7 +96,7 @@ const schemamarkup = {
       </div>
       <div class="h-[100vh]"></div>
     </div>
-    <section class="my-13xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto cursor cursor-blue_yellow_cursor">
+    <section class="mb-9xl md:pt-12xl lg:pt-19xl lg:pb-10xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto cursor cursor-blue_yellow_cursor">
       <h1 class="mt-[600px] md:mt-0 text-h1_m md:text-h2_d lg:text-h1_d font-display text-brown-800 text-center mb-2xl md:mb-5xl">Byt dit tøj <br /> Forny din stil</h1>
       <div class="md:flex md:flex-row md:justify-center md:gap-2xl grid justify-items-center gap-m">
         <div class="md:max-w-70">
@@ -125,7 +125,7 @@ const schemamarkup = {
         </div>
       </div>
     </section>
-    <section>
+    <section class="py-10xl lg:py-16xl">
       <Steps />
     </section>
 
@@ -133,7 +133,7 @@ const schemamarkup = {
       <Image class="w-full" src={large1} alt="Baggrund med pige i klædeskabet" />
     </section>
 
-    <section class="my-8xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+    <section class="my-8xl lg:my-12xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
       <Goersom />
       <div class="mt-2xl md:max-w-60">
         <Linket href="/kontakt" cardimage_r="/red_l.svg" cardimage_l="/red_r.svg" cardimage_r_alt="rød højre side" cardimage_l_alt="rød venstre side">Se butikker</Linket>
@@ -142,10 +142,10 @@ const schemamarkup = {
     <section class="cursor cursor-yellow_blue_cursor">
       <div class="z-30">
         <Image class="flip_horisontal w-full -mb-1" src={figure_blue} alt="Blå bue" />
-        <div class="bg-blue-500 h-[1800px] md:h-[1800px] lg:h-[550px] xl:h-[450px] 2xl:h-[480px]"></div>
+        <div class="bg-blue-500 h-[1800px] md:h-[2000px] lg:h-[550px] xl:h-[450px] 2xl:h-[480px]"></div>
         <Image class="flip_vertikal w-full -mt-1" src={figure_blue} alt="Blå bue" />
       </div>
-      <div class="mt-[-1800px] md:mt-[-1800px] lg:mt-[-630px] xl:mt-[-580px] 2xl:mt-[-600px] max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+      <div class="mt-[-1800px] md:mt-[-2000px] lg:mt-[-630px] xl:mt-[-580px] 2xl:mt-[-600px] max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
         <h2 class="text-h2_m font-display font-bold text-neutrals-50 md:text-h2_d text-center mb-xl">Vi deler klædeskab</h2>
         <div class="z-50 relative grid gap-2xl lg:grid-cols-3">
           <Anmeldelse
@@ -175,8 +175,8 @@ const schemamarkup = {
         </div>
       </div>
     </section>
-    <section class="space-y-l max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-      <h2 class="font-display text-h2_m font-bold text-brown-800 text-center">Følg os</h2>
+    <section class="py-8xl lg:py-18xl space-y-l max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+      <h2 class="font-display text-h2_m lg:text-h2_d font-bold text-brown-800 text-center">Følg os</h2>
       <div class="grid gap-sm lg:grid-cols-5">
         <div class="grid gap-sm lg:grid-cols-2 col-span-2">
           <SoMe_large url="" video="some_large1.mov" videoalt="Video fra socialt medie" icon="icon_instagram.svg" iconalt="Instagram-logo" some="Instagram" />
