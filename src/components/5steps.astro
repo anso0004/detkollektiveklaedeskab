@@ -149,11 +149,11 @@ import skab from "../assets/images/skab.svg";
 
     const items = document.querySelectorAll("#horisontalliste li");
 
-    if (screenwidth > 1200) {
+    if (screenwidth > 1300) {
       console.log("stor");
       scroll(
         animate("#horisontalliste", {
-          transform: ["none", `translateX(-${items.length - 1}00vw)`],
+          transform: ["none", `translateX(-${items.length - 3}00vw)`],
         }),
         { target: document.querySelector("#horisontalscrollsection") }
       );
@@ -161,7 +161,7 @@ import skab from "../assets/images/skab.svg";
       console.log(screenwidth);
       scroll(
         animate("#horisontalliste", {
-          transform: ["none", `translateX(-${items.length - 5}00vw)`],
+          transform: ["none", `translateX(-${items.length - 2}00vw)`],
         }),
         { target: document.querySelector("#horisontalscrollsection") }
       );
