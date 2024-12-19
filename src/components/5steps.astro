@@ -67,13 +67,45 @@ import skab from "../assets/images/skab.svg";
   </section>
 </div>
 
-<section class="max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
-  <div>
-    <h1 class="text-[250px] md:text-[610px] text-brown-800 leading-none font-sans mr-[-25px]">1</h1>
-    <figcaption class="text-h3_m md:text-h3_d font-display text-brown-800">Find det tøj du <br /> ikke længere bruger</figcaption>
-    <img src="/skab.gif" class="flex justify-center max-w-20xl" alt="gif af tøj" />
+<section class="md:hidden space-y-5xl max-w-[20.375rem] md:max-w-[43rem] lg:max-w-[58rem] xl:max-w-[70rem] 2xl:max-w-[87rem] mx-auto">
+  <div class="space-y-xs">
+    <div class="flex flex-row justify-end items-end gap-xl">
+      <h1 class="text-[200px] md:text-[610px] text-brown-800 leading-none font-sans mr-[-25px]">1</h1>
+      <img src="/skab.gif" class="flex pb-ml w-15xl h-15xl" alt="gif af tøj" />
+    </div>
+    <figcaption class="text-h3_m md:text-h3_d font-display text-brown-800">Meld dig ind i Klædeskabet</figcaption>
   </div>
-  <div>
+  <div class="space-y-xs">
+    <div class="flex flex-row justify-end items-end gap-xl">
+      <h1 class="text-[200px] md:text-[610px] text-brown-800 leading-none font-sans mr-[-25px]">2</h1>
+      <img src="/toj.gif" class="flex pb-ml w-15xl h-15xl" alt="gif af tøj" />
+    </div>
+    <figcaption class="text-h3_m md:text-h3_d font-display text-brown-800">Find det tøj du ikke længere bruger</figcaption>
+  </div>
+  <div class="space-y-xs">
+    <div class="flex flex-row justify-end items-end gap-xl">
+      <h1 class="text-[200px] md:text-[610px] text-brown-800 leading-none font-sans mr-[-25px]">3</h1>
+      <img src="/kasser.gif" class="flex pb-ml w-15xl h-15xl" alt="gif af tøj" />
+    </div>
+    <figcaption class="text-h3_m md:text-h3_d font-display text-brown-800">Aflevér tøjet i butikken</figcaption>
+  </div>
+  <div class="space-y-xs">
+    <div class="flex flex-row justify-end items-end gap-xl">
+      <h1 class="text-[200px] md:text-[610px] text-brown-800 leading-none font-sans mr-[-25px]">4</h1>
+      <img src="/telefon.gif" class="flex pb-ml w-15xl h-15xl" alt="gif af tøj" />
+    </div>
+    <figcaption class="text-h3_m md:text-h3_d font-display text-brown-800">Modtag point for tøjet</figcaption>
+  </div>
+  <div class="space-y-xs">
+    <div class="flex flex-row justify-end items-end gap-xl">
+      <h1 class="text-[200px] md:text-[610px] text-brown-800 leading-none font-sans mr-[-25px]">5</h1>
+      <img src="/tasker.gif" class="flex pb-ml w-15xl h-15xl" alt="gif af tøj" />
+    </div>
+    <figcaption class="text-h3_m md:text-h3_d font-display text-brown-800">Brug pointene til at handle nyt genbrugstøj</figcaption>
+  </div>
+
+  <!-- fjekw -->
+  <!-- <div>
     <h1 class="text-[250px] md:text-[610px] text-brown-800 leading-none font-sans mr-[-25px]">1</h1>
     <figcaption class="text-h3_m md:text-h3_d font-display text-brown-800">Find det tøj du <br /> ikke længere bruger</figcaption>
     <img src="/toj.gif" class="flex justify-center max-w-20xl" alt="gif af tøj" />
@@ -93,10 +125,10 @@ import skab from "../assets/images/skab.svg";
     <figcaption class="text-h3_m md:text-h3_d font-display text-brown-800">Find det tøj du <br /> ikke længere bruger</figcaption>
     <img src="/tasker.gif" class="flex justify-center max-w-20xl" alt="gif af tøj" />
   </div>
-</section>
+</section> -->
 
-<!-- Forsøg på at få mobilen til at virke -->
-<!-- <div class="overflow-clip">
+  <!-- Forsøg på at få mobilen til at virke -->
+  <!-- <div class="overflow-clip">
   <section id="horisontalscrollsection" class="h-[600vw]">
     <ul id="horisontalliste" class="list-none pl-0 flex sticky top-[10vh]">
       <li class="grid grid-cols content-center ml-12xl md:w-[30vw] overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[1000px]"><h1 class="md:text-h1_d text-h1_m font-display text-brown-800 text-right">5 Steps <br /> til at <br /> komme<br /> i gang</h1></figure></li>
@@ -109,15 +141,16 @@ import skab from "../assets/images/skab.svg";
   </section>
 </div> -->
 
-<script>
-  /* Import af Motion One biblioteket */
-  import { animate, stagger, inView, scroll, timeline } from "motion";
+  <script>
+    /* Import af Motion One biblioteket */
+    import { animate, stagger, inView, scroll, timeline } from "motion";
 
-  const items = document.querySelectorAll("#horisontalliste li");
-  scroll(
-    animate("#horisontalliste", {
-      transform: ["none", `translateX(-${items.length - 2}00vw)`],
-    }),
-    { target: document.querySelector("#horisontalscrollsection") }
-  );
-</script>
+    const items = document.querySelectorAll("#horisontalliste li");
+    scroll(
+      animate("#horisontalliste", {
+        transform: ["none", `translateX(-${items.length - 2}00vw)`],
+      }),
+      { target: document.querySelector("#horisontalscrollsection") }
+    );
+  </script>
+</section>
